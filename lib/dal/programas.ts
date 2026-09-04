@@ -120,11 +120,18 @@ export async function moverExercicioDoDia(id: string, direcao: -1 | 1) {
   await Promise.all(arr.map((x, k) => supabase.from("programa_exercicios").update({ ordem: k + 1 }).eq("id", x.id)));
 }
 
-/** Duplica um programa (dias + exercícios) para o mesmo aluno, como novo programa ativo. */
-export async function duplicarPrograma(id: string, novoNome: string): Promise<string | null> {
+/** Programas do personal logado (todos os alunos), para copiar como modelo. */
+export async function listarProgramasDoPersonal(): Promise<(Programa & { aluno_nome: string })[]> {
+  const supabase = await criarClienteServidor();
+  const { data } = await supabase.from("programas").select(`${CAMPOS_PROG}, aluno:alunos(nome)`).order("criado_em", { ascending: false }).limit(50);
+  return ((data ?? []) as unknown as (Programa & { aluno: { nome: string } | null })[]).map((p) => ({ ...p, aluno_nome: p.aluno?.nome ?? "" }));
+}
+
+/** Duplica um programa (dias + exercícios) como novo programa ativo, para o mesmo aluno ou para outro (modelo). */
+export async function duplicarPrograma(id: string, novoNome: string, alunoDestino?: string): Promise<string | null> {
   const origem = await obterProgramaCompleto(id);
   if (!origem) return null;
-  const novoId = await criarPrograma({ personalId: origem.personal_id, alunoId: origem.aluno_id, nome: novoNome, dias: origem.dias.map((d) => d.nome), observacao: origem.observacao });
+  const novoId = await criarPrograma({ personalId: origem.personal_id, alunoId: alunoDestino ?? origem.aluno_id, nome: novoNome, dias: origem.dias.map((d) => d.nome), observacao: origem.observacao });
   const novo = await obterProgramaCompleto(novoId);
   const supabase = await criarClienteServidor();
   for (const [i, dia] of origem.dias.entries()) {
@@ -132,7 +139,7 @@ export async function duplicarPrograma(id: string, novoNome: string): Promise<st
     if (dia.observacao) await supabase.from("programa_dias").update({ observacao: dia.observacao }).eq("id", destino.id);
     if (dia.exercicios.length) {
       await supabase.from("programa_exercicios").insert(dia.exercicios.map((x) => ({
-        programa_dia_id: destino.id, exercicio_id: x.exercicio_id, ordem: x.ordem, series: x.series, repeticoes: x.repeticoes, carga: x.carga, descanso_seg: x.descanso_seg, observacao: x.observacao,
+        programa_dia_id: destino.id, exercicio_id: x.exercicio_id, ordem: x.ordem, series: x.series, repeticoes: x.repeticoes, carga: alunoDestino ? null : x.carga, descanso_seg: x.descanso_seg, observacao: x.observacao,
       })));
     }
   }

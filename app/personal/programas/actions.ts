@@ -21,9 +21,16 @@ export async function criarProgramaAction(_: EstadoPrograma, form: FormData): Pr
   const personal = await meuPersonal();
   if (!aluno || !personal) return { erro: "Aluno não encontrado." };
   const letras = ["A", "B", "C", "D", "E", "F", "G"];
+  const copiarDe = s(form, "copiar_de");
   let id: string;
   try {
-    id = await criarPrograma({ personalId: personal.id, alunoId, nome, dias: letras.slice(0, qtd).map((l) => `Treino ${l}`), observacao: s(form, "observacao") || null });
+    if (copiarDe) {
+      const novo = await duplicarPrograma(copiarDe, nome, alunoId);
+      if (!novo) return { erro: "Programa de origem não encontrado." };
+      id = novo;
+    } else {
+      id = await criarPrograma({ personalId: personal.id, alunoId, nome, dias: letras.slice(0, qtd).map((l) => `Treino ${l}`), observacao: s(form, "observacao") || null });
+    }
   } catch (e) { return { erro: e instanceof Error ? e.message : "Erro ao criar programa." }; }
   revalidatePath(`/personal/alunos/${alunoId}`);
   redirect(`/personal/programas/${id}`);

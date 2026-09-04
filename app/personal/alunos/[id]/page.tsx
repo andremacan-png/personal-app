@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { exigirUsuario } from "@/lib/auth/dal";
 import { meuPersonal, obterAluno } from "@/lib/dal/alunos";
-import { listarProgramasDoAluno } from "@/lib/dal/programas";
+import { listarProgramasDoAluno, listarProgramasDoPersonal } from "@/lib/dal/programas";
 import { listarExecucoes } from "@/lib/dal/execucoes";
 import { formatarDuracao, rotuloRelativo } from "@/lib/datas";
 import { resumirConsistencia } from "@/lib/streak";
@@ -25,7 +25,7 @@ export default async function PaginaAluno({ params }: { params: Promise<{ id: st
   const { id } = await params;
   const aluno = await obterAluno(id);
   if (!aluno) notFound();
-  const [programas, personal, base, execucoes, limitacoes] = await Promise.all([listarProgramasDoAluno(id), meuPersonal(), urlBase(), listarExecucoes(id, 100), listarLimitacoes(id)]);
+  const [programas, personal, base, execucoes, limitacoes, modelos] = await Promise.all([listarProgramasDoAluno(id), meuPersonal(), urlBase(), listarExecucoes(id, 100), listarLimitacoes(id), listarProgramasDoPersonal()]);
   const consistencia = resumirConsistencia(execucoes.map((e) => e.concluido_em!), 3);
   const link = linkConvite(base, aluno.convite_token);
   const wa = linkWhatsApp(aluno.telefone, mensagemConvite(aluno.nome, personal?.nome ?? "seu personal", link));
@@ -97,7 +97,7 @@ export default async function PaginaAluno({ params }: { params: Promise<{ id: st
             ))}
           </ul>
         )}
-        <FormularioNovoPrograma alunoId={aluno.id} />
+        <FormularioNovoPrograma alunoId={aluno.id} modelos={modelos.filter((m) => m.aluno_id !== aluno.id || !m.ativo).map((m) => ({ id: m.id, nome: m.nome, aluno_nome: m.aluno_nome }))} />
       </section>
 
       {execucoes.length > 0 && (

@@ -7,6 +7,8 @@ import { rotuloRelativo } from "@/lib/datas";
 import { resumirConsistencia } from "@/lib/streak";
 import { CalendarioPresenca } from "@/components/calendario-presenca";
 import { listarLimitacoes } from "@/lib/dal/limitacoes";
+import { calcularConquistas, houveRecordeRecente } from "@/lib/conquistas";
+import { evolucaoPorExercicio } from "@/lib/dal/execucoes";
 import { sair } from "@/app/login/actions";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { NavAluno } from "@/components/nav-aluno";
@@ -19,6 +21,7 @@ export default async function InicioAluno() {
   const recentes = alunoId ? await listarExecucoes(alunoId, 5) : [];
   const historico = alunoId ? await listarExecucoes(alunoId, 200) : [];
   const limitacoes = alunoId ? await listarLimitacoes(alunoId) : [];
+  const evolucao = alunoId && historico.length ? await evolucaoPorExercicio(alunoId, 40) : [];
   const consistencia = resumirConsistencia(historico.map((e) => e.concluido_em!), programa?.dias.length ?? 1);
   // Sugestão simples: o dia menos recente (ou o primeiro nunca feito)
   const sugerido = programa?.dias.length
@@ -85,6 +88,16 @@ export default async function InicioAluno() {
           <p className="mt-2 text-xs text-neutral-500">{consistencia.treinosEstaSemana >= consistencia.metaSemanal ? "Meta da semana batida. Não quebre a corrente!" : `Faltam ${consistencia.metaSemanal - consistencia.treinosEstaSemana} para fechar a semana.`}</p>
         </section>
       )}
+
+      {alunoId && programa && (() => { const cs = calcularConquistas(consistencia, houveRecordeRecente(evolucao)); const ok = cs.filter((c) => c.conquistada); const prox = cs.filter((c) => !c.conquistada && c.progresso); return (
+        <section className="mt-6">
+          <h3 className="font-medium">Conquistas <span className="text-sm font-normal text-neutral-500">{ok.length}/{cs.length}</span></h3>
+          <div className="mt-2 flex flex-wrap gap-2">
+            {ok.map((c) => <span key={c.id} title={c.descricao} className="rounded-full bg-neutral-900 px-3 py-1 text-xs text-white">{c.emoji} {c.titulo}</span>)}
+            {prox.map((c) => <span key={c.id} title={c.descricao} className="rounded-full border border-dashed px-3 py-1 text-xs text-neutral-500">{c.emoji} {c.titulo} · {c.progresso}</span>)}
+          </div>
+        </section>
+      ); })()}
 
       {recentes.length > 0 && (
         <section className="mt-8">
