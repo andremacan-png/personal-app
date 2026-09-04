@@ -57,6 +57,18 @@ test("personal cria exercício e programa; aluno executa o treino e vê o histó
   await expect(page.getByText(/Cuidado com Ombro/)).toBeVisible();
   await expect(page.getByText(/1 exercício\(s\) com possível conflito/)).toBeVisible();
 
+  // alternativas: regras + (se configurada) IA; nada é trocado aqui, só conferimos que a tela responde
+  const editorUrl = page.url();
+  await page.getByRole("link", { name: "Ver alternativas" }).click();
+  await expect(page.getByRole("heading", { name: /Trocar "Supino E2E/ })).toBeVisible();
+  const pedir = page.getByRole("link", { name: "Pedir 3 alternativas" });
+  if (await pedir.isVisible()) {
+    await pedir.click();
+    await expect(page.getByText("Sugestão da IA (você decide)")).toBeVisible({ timeout: 60000 });
+    await expect(page.getByRole("button", { name: "Trocar por este" }).first().or(page.getByText("Sem sugestão desta vez"))).toBeVisible({ timeout: 60000 });
+  }
+  await page.goto(editorUrl);
+
   // pega o token do convite pela página do aluno (link no WhatsApp)
   await page.goto(alunoUrl);
   const wa = await page.getByRole("link", { name: /WhatsApp/ }).getAttribute("href");
