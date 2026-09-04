@@ -61,7 +61,7 @@ test("personal cria exercício e programa; aluno executa o treino e vê o histó
   const editorUrl = page.url();
   await page.getByRole("link", { name: "Ver alternativas" }).click();
   await expect(page.getByRole("heading", { name: /Trocar "Supino E2E/ })).toBeVisible();
-  const pedir = page.getByRole("link", { name: "Pedir 3 alternativas" });
+  const pedir = page.getByRole("button", { name: "Pedir 3 alternativas" });
   if (await pedir.isVisible()) {
     await pedir.click();
     await expect(page.getByText("Sugestão da IA (você decide)")).toBeVisible({ timeout: 60000 });

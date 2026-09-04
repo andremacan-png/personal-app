@@ -9,7 +9,7 @@ import { iaDisponivel, sugerirAlternativas } from "@/lib/ia/sugestoes";
 import { listarLimitacoes } from "@/lib/dal/limitacoes";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { adicionarExercicioAction } from "../../actions";
+import { adicionarExercicioAction, pedirSugestoesAction } from "../../actions";
 
 export default async function PaginaAdicionarExercicio({ params, searchParams }: { params: Promise<{ id: string }>; searchParams: Promise<{ dia?: string; q?: string; grupo?: string; trocar?: string; ia?: string }> }) {
   await exigirUsuario("personal");
@@ -49,7 +49,7 @@ export default async function PaginaAdicionarExercicio({ params, searchParams }:
             <p className="text-sm font-medium text-violet-900">Sugestão da IA (você decide)</p>
             {ia !== "1" ? (
               iaDisponivel()
-                ? <Link href={`?dia=${d.id}&trocar=${trocar}&grupo=${encodeURIComponent(grupo || trocando.exercicio.grupo_muscular)}&ia=1`} className={buttonVariants({ size: "sm" })}>Pedir 3 alternativas</Link>
+                ? <form action={pedirSugestoesAction}><input type="hidden" name="programa_id" value={id} /><input type="hidden" name="dia_id" value={d.id} /><input type="hidden" name="trocar" value={trocar} /><input type="hidden" name="grupo" value={grupo || trocando.exercicio.grupo_muscular} /><Button type="submit" size="sm">Pedir 3 alternativas</Button></form>
                 : <span className="text-xs text-violet-800">IA não configurada neste ambiente (ANTHROPIC_API_KEY).</span>
             ) : sugestoes.length === 0 ? <span className="text-xs text-violet-800">Sem sugestão desta vez; use a lista abaixo.</span> : null}
           </div>

@@ -117,3 +117,10 @@ export async function moverItemAction(form: FormData) {
   await moverExercicioDoDia(s(form, "item_id"), form.get("direcao") === "-1" ? -1 : 1);
   rev(s(form, "programa_id"));
 }
+
+/** Vai para o seletor com ia=1 (sem prefetch de Link: a chamada à IA só acontece quando o personal pede). */
+export async function pedirSugestoesAction(form: FormData) {
+  await exigirUsuario("personal");
+  const programaId = s(form, "programa_id"), diaId = s(form, "dia_id"), trocar = s(form, "trocar"), grupo = s(form, "grupo");
+  redirect(`/personal/programas/${programaId}/adicionar?dia=${diaId}&trocar=${trocar}&grupo=${encodeURIComponent(grupo)}&ia=1`);
+}
