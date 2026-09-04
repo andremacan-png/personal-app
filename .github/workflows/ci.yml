@@ -1,0 +1,26 @@
+# A cada push/PR: lint, tipos e testes. X vermelho = não vai pra produção.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+        env:
+          # Preencher nos Secrets do repo para o teste de RLS rodar contra o homolog.
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.HOMOLOG_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.HOMOLOG_SUPABASE_PUBLISHABLE_KEY }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.HOMOLOG_SUPABASE_SERVICE_ROLE_KEY }}

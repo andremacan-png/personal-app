@@ -1,0 +1,14 @@
+{
+  "name": "APP Personal",
+  "short_name": "Personal",
+  "description": "Seu treino, seu progresso.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fafafa",
+  "theme_color": "#171717",
+  "lang": "pt-BR",
+  "icons": [
+    { "src": "/icones/icone-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icones/icone-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
