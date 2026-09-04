@@ -37,7 +37,7 @@ test("personal cria exercício e programa; aluno executa o treino e vê o histó
   await page.getByRole("combobox", { name: /Região/ }).selectOption("ombro");
   await page.getByPlaceholder("ex.: dor ao agachar fundo").fill("tendinite");
   await page.getByRole("button", { name: "Adicionar" }).click();
-  await expect(page.getByText("Ombro", { exact: true })).toBeVisible();
+  await expect(page.getByText("tendinite")).toBeVisible();
 
   // personal: programa com 2 dias e 1 exercício no dia A
   await page.getByLabel("Novo programa").fill("Hipertrofia E2E");
