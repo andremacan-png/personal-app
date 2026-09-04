@@ -17,7 +17,7 @@ export function FormularioLogin({ proximo, modoInicial }: { proximo: string; mod
   return (
     <Card className="w-full max-w-sm">
       <CardHeader>
-        <CardTitle>{cadastro ? "Criar conta de personal" : "Entrar"}</CardTitle>
+        <CardTitle><h1>{cadastro ? "Criar conta de personal" : "Entrar"}</h1></CardTitle>
         <CardDescription>
           {cadastro ? "Alunos entram pelo link de convite do personal." : "APP Personal"}
         </CardDescription>

@@ -11,7 +11,7 @@ test("senha errada mostra erro", async ({ page }) => {
   await page.getByLabel("E-mail").fill("ninguem@teste.local");
   await page.getByLabel("Senha").fill("senha-errada-123");
   await page.getByRole("button", { name: "Entrar" }).click();
-  await expect(page.getByRole("alert")).toContainText("incorretos");
+  await expect(page.getByRole("alert").filter({ hasText: "incorretos" })).toBeVisible();
 });
 
 test("personal entra e cai no painel", async ({ page }) => {
