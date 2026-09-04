@@ -1,5 +1,6 @@
 import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
+import { OPCOES_DB } from "./config";
 
 /** Cliente para Server Components, Server Actions e Route Handlers. */
 export async function criarClienteServidor() {
@@ -8,6 +9,7 @@ export async function criarClienteServidor() {
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!,
     {
+      ...OPCOES_DB,
       cookies: {
         getAll() {
           return cookieStore.getAll();

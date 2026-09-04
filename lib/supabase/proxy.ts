@@ -1,6 +1,7 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 import { ehRotaPublica } from "@/lib/auth/rotas";
+import { OPCOES_DB } from "./config";
 
 /**
  * Renova a sessão do Supabase a cada requisição e faz o redirect otimista
@@ -13,6 +14,7 @@ export async function atualizarSessao(request: NextRequest) {
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!,
     {
+      ...OPCOES_DB,
       cookies: {
         getAll() {
           return request.cookies.getAll();

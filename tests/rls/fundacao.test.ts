@@ -4,6 +4,10 @@
  */
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
+import { OPCOES_DB, type SCHEMA } from "@/lib/supabase/config";
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type Cliente = SupabaseClient<any, "public", typeof SCHEMA>;
 
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const chave = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
@@ -13,9 +17,9 @@ const temBanco = Boolean(url && chave && service && !url.includes("localhost:543
 const rodar = temBanco ? describe : describe.skip;
 
 rodar("RLS · fundação", () => {
-  let admin: SupabaseClient;
+  let admin: Cliente;
   const criados: string[] = [];
-  let personalX: SupabaseClient, personalY: SupabaseClient, alunoA: SupabaseClient;
+  let personalX: Cliente, personalY: Cliente, alunoA: Cliente;
   let tenantX: string, alunoAId: string, alunoBId: string;
 
   async function usuario(papel: "personal" | "aluno", nome: string) {
@@ -26,14 +30,14 @@ rodar("RLS · fundação", () => {
     });
     if (error) throw error;
     criados.push(data.user.id);
-    const cliente = createClient(url!, chave!, { auth: { persistSession: false } });
+    const cliente = createClient(url!, chave!, { ...OPCOES_DB, auth: { persistSession: false } });
     const { error: e2 } = await cliente.auth.signInWithPassword({ email, password });
     if (e2) throw e2;
     return { cliente, id: data.user.id };
   }
 
   beforeAll(async () => {
-    admin = createClient(url!, service!, { auth: { persistSession: false } });
+    admin = createClient(url!, service!, { ...OPCOES_DB, auth: { persistSession: false } });
     const x = await usuario("personal", "Personal X");
     const y = await usuario("personal", "Personal Y");
     const a = await usuario("aluno", "Aluno A");
