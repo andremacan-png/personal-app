@@ -77,3 +77,26 @@ cadastro e invalida o token, tudo dentro do banco com regras de RLS testadas.
 **Por quê**: a regra "só a primeira conta de aluno que abrir o link fica com ele" precisa ser atômica;
 se ficasse no código da tela, duas aberturas quase simultâneas poderiam dar conflito.
 
+## 12. Biblioteca de exercícios: base aberta traduzida por IA + curadoria do personal (2026-09-04)
+**O que**: 876 exercícios do free-exercise-db (licença livre, imagens no GitHub) com nome e instruções traduzidos
+pela API da Anthropic e contraindicações sugeridas por ela num vocabulário fixo. O personal duplica e edita o que
+quiser; a base é só leitura.
+**Por quê**: começar cheio no dia 1 vale mais que começar perfeito. Custou ~US$ 9 e um script retomável.
+**Aula**: tudo que a IA gerou está marcado como sugestão e é revisável; nada dela entra em decisão sem um humano.
+
+## 13. Adaptação em duas camadas: regras no banco, IA por cima (2026-09-04)
+**O que**: o conflito exercício × limitação é uma regra determinística (`lib/limitacoes.ts`) que roda sempre e
+nunca deixa passar um vetado; a IA só escolhe, entre os candidatos já filtrados, os 3 mais parecidos e explica.
+**Por quê**: a regra dá segurança e custo zero; a IA dá conveniência. Se a IA falhar ou não estiver configurada,
+a tela continua útil (lista ordenada sem conflito).
+
+## 14. Conquistas e streak derivados, sem tabela (2026-09-04)
+**O que**: sequência semanal e medalhas são calculadas na hora a partir das execuções.
+**Por quê**: zero risco de dessincronizar; regra pura testada. Se um dia precisar de notificação "você ganhou",
+aí sim materializa em tabela de eventos.
+
+## 15. Três armadilhas do Next 16 encontradas hoje
+`body` em `flex flex-col` deixa o `main` mais largo que a tela no mobile (min-width automático do item flex) ·
+`<Link>` pré-carrega a rota: nunca colocar efeito caro (IA) atrás de um GET com Link, usar ação de formulário ·
+`describe.skip` do Vitest executa o corpo do describe (criar clientes só dentro de `beforeAll`).
+
