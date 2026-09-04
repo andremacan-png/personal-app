@@ -46,3 +46,10 @@ export async function criarAluno(dados: { nome: string; telefone: string | null 
   if (error) throw new Error("Falha ao criar aluno: " + error.message);
   return data as Aluno;
 }
+
+export async function atualizarAluno(id: string, d: Partial<Pick<Aluno, "nome" | "telefone" | "status">>): Promise<boolean> {
+  const supabase = await criarClienteServidor();
+  const { data, error } = await supabase.from("alunos").update(d).eq("id", id).select("id");
+  if (error) throw new Error("Falha ao atualizar aluno: " + error.message);
+  return (data?.length ?? 0) > 0;
+}

@@ -9,7 +9,9 @@ import { resumirConsistencia } from "@/lib/streak";
 import { CalendarioPresenca } from "@/components/calendario-presenca";
 import { urlBase } from "@/lib/url";
 import { linkConvite, linkWhatsApp, mensagemConvite } from "@/lib/convite";
-import { buttonVariants } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { atualizarAlunoAction } from "../actions";
 import { BotaoCopiar } from "@/components/botao-copiar";
 import { NavPersonal } from "@/components/nav-personal";
 import { FormularioNovoPrograma } from "./formulario-programa";
@@ -33,6 +35,20 @@ export default async function PaginaAluno({ params }: { params: Promise<{ id: st
       <header className="mt-1">
         <h1 className="text-2xl font-semibold">{aluno.nome}</h1>
         <p className="text-sm text-neutral-500">{ROTULO[aluno.status]}{aluno.telefone ? ` · ${aluno.telefone}` : ""}</p>
+        <details className="mt-2 text-sm">
+          <summary className="cursor-pointer text-neutral-600 hover:underline">Editar dados / status</summary>
+          <form action={atualizarAlunoAction} className="mt-2 flex flex-wrap items-end gap-2 rounded-lg border p-3">
+            <input type="hidden" name="id" value={aluno.id} />
+            <label className="text-xs text-neutral-500">Nome<br /><Input name="nome" defaultValue={aluno.nome} className="w-56" /></label>
+            <label className="text-xs text-neutral-500">WhatsApp<br /><Input name="telefone" defaultValue={aluno.telefone ?? ""} className="w-40" /></label>
+            <label className="text-xs text-neutral-500">Status<br />
+              <select name="status" defaultValue={aluno.status} className="h-9 rounded-md border bg-white px-2 text-sm">
+                {aluno.status === "convidado" && <option value="convidado">Convite pendente</option>}
+                <option value="ativo">Ativo</option><option value="pausado">Pausado</option><option value="encerrado">Encerrado</option>
+              </select></label>
+            <Button type="submit" size="sm">Salvar</Button>
+          </form>
+        </details>
       </header>
 
       {aluno.status === "convidado" && (

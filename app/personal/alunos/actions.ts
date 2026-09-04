@@ -21,3 +21,20 @@ export async function criarAlunoAction(_: EstadoNovoAluno, form: FormData): Prom
   revalidatePath("/personal/alunos");
   redirect(`/personal/alunos?novo=${id}`);
 }
+
+export async function atualizarAlunoAction(form: FormData) {
+  await exigirUsuario("personal");
+  const id = String(form.get("id") ?? "");
+  const nome = String(form.get("nome") ?? "").trim();
+  const telefone = String(form.get("telefone") ?? "").trim() || null;
+  const status = String(form.get("status") ?? "");
+  const permitidos = ["convidado", "ativo", "pausado", "encerrado"] as const;
+  const { atualizarAluno } = await import("@/lib/dal/alunos");
+  await atualizarAluno(id, {
+    ...(nome.length >= 2 ? { nome } : {}),
+    telefone,
+    ...(permitidos.includes(status as (typeof permitidos)[number]) ? { status: status as (typeof permitidos)[number] } : {}),
+  });
+  revalidatePath(`/personal/alunos/${id}`); revalidatePath("/personal/alunos");
+  redirect(`/personal/alunos/${id}`);
+}

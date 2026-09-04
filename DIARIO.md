@@ -6,7 +6,7 @@ Projeto tocado em conversas do Claude Code. Cada conversa lê este arquivo + mem
 | Frente | Estado | Onde |
 |---|---|---|
 | Fundação (repo, docs, auth, CI, deploy) | ✅ concluída 04/09 | `docs/02-ROADMAP.md` Fase 0 |
-| Piloto (treino + execução + streak) | 🟡 em andamento (1/7 itens) | Fase 1 |
+| Piloto (treino + execução + streak) | 🟡 6/7 itens (falta PWA offline) | Fase 1 |
 | Diferencial (evolução, gamificação, IA) | ⚪ | Fase 2 |
 | Dinheiro (Asaas) | ⚪ | Fase 3 |
 | Escala (lembretes, nativo) | ⚪ | Fase 4 |
@@ -56,4 +56,14 @@ Projeto tocado em conversas do Claude Code. Cada conversa lê este arquivo + mem
 - Ambiente: `.env.development.local` → symlink para `.env.test.local` (chave de serviço no servidor local); preview em `npm run dev:test` (3100).
 - Próximo incremento: biblioteca de exercícios (seed free-exercise-db traduzido + exercícios próprios).
 - Deploy do incremento em produção: a `SUPABASE_SERVICE_ROLE_KEY` da Vercel estava vazia → convite dava erro 500 no aceite. Recadastrada via CLI (production + preview, valor nunca exibido), redeploy → **e2e 4/4 na produção**. A chave de serviço agora é necessária no servidor (decisão #10).
+
+### 2026-09-04 (noite) · Fase 1 · incrementos 2 a 5 em sessão autônoma
+André saiu por 4h e pediu produção contínua. Entregue, tudo com RLS testada e commitado:
+- **Biblioteca de exercícios** (migração 0003): 876 exercícios do free-exercise-db (licença livre, 2 imagens cada) com nome e instruções **traduzidos pela API da Anthropic** (`scripts/exercicios/traduzir.mjs`, claude-opus-5, ~US$ 7, retomável) + mapas determinísticos de músculo/equipamento/categoria; seed idempotente por slug (`scripts/exercicios/seed.mjs`). Personal cria os próprios (vídeo, imagem, contraindicações), duplica da base para editar, arquiva. Busca por nome, grupo e origem.
+- **Programas** (0004): programa por aluno (1 ativo por vez, anteriores viram histórico) → dias → exercícios com séries/reps/carga/descanso/observação; reordenar, remover, duplicar programa, encerrar/reativar. Seletor de exercícios com busca.
+- **Execuções** (0005): aluno vê o programa ativo com "sugestão de hoje" (dia menos recente), treina série a série com reps/carga pré-preenchidas da última vez, marca feitas, série extra, RPE e observação pro personal; **rascunho em localStorage** (refresh não perde); conclusão com resumo (séries, tempo, kg movidos); histórico.
+- **Consistência**: `lib/streak.ts` (regra pura, 7 testes): meta semanal = nº de dias do programa, semanas seguidas (a semana em curso não quebra), calendário de 28 dias. Aluno vê na home; personal vê "quem treinou nos últimos 7 dias" (quem não treinou em vermelho) e, no aluno, semana/sequência/total + últimos treinos com observações 💬.
+- Editar aluno (nome, WhatsApp, status pausado/encerrado).
+- Provas: vitest **35 testes** (unit + RLS de 6 tabelas contra o banco), e2e **5 specs** incluindo o fluxo completo personal→aluno em 2 navegadores (16 s).
+- Decisões implícitas a registrar: contas de aluno só via convite; um programa ativo por aluno; execução guarda snapshot do nome do dia/exercício (programa pode mudar depois).
 

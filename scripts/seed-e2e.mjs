@@ -22,3 +22,5 @@ for (const u of lixo) await admin.auth.admin.deleteUser(u.id);
 const { data: pe } = await admin.from("personals").select("id").eq("profile_id", existente?.id ?? (await admin.auth.admin.listUsers({ perPage: 1000 })).data.users.find((u) => u.email === email).id).single();
 const { count } = await admin.from("alunos").delete({ count: "exact" }).eq("personal_id", pe.id).like("nome", "Carla E2E %");
 console.log(`limpeza: ${lixo.length} conta(s) de aluno e2e, ${count ?? 0} aluno(s) de teste removidos`);
+const { count: nEx } = await admin.from("exercicios").delete({ count: "exact" }).eq("personal_id", pe.id).like("nome", "% E2E %");
+console.log(`limpeza: ${nEx ?? 0} exercício(s) de teste removidos`);
