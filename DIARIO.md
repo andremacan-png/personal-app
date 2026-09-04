@@ -13,7 +13,6 @@ Projeto tocado em conversas do Claude Code. Cada conversa lê este arquivo + mem
 
 ## Pendências abertas
 - [ ] Fase 1: definir Site URL / Redirect URLs do Auth para o APP Personal (o projeto Supabase é compartilhado; hoje o e-mail de confirmação apontaria pro site da esteira) → fluxo de convite do aluno deve usar link próprio
-- [ ] Vercel: `SUPABASE_SERVICE_ROLE_KEY` foi cadastrada pelo André mas o app não usa; remover ou manter só se algum job precisar
 - [ ] Domínio próprio quando o nome estiver decidido (tira a produção da URL `.vercel.app`)
 - [ ] Fase 3: migrar o banco para org Supabase própria (Pro) quando pagar a conta
 - [ ] Amigo: responder `docs/05-QUESTIONARIO-AMIGO.md`
@@ -56,4 +55,5 @@ Projeto tocado em conversas do Claude Code. Cada conversa lê este arquivo + mem
 - Provas: vitest 20/20 (unit + RLS do convite contra o banco), **e2e 4/4** com o fluxo completo em 2 navegadores. `npm run seed:e2e` cria o personal de teste e limpa os alunos que o e2e gerou.
 - Ambiente: `.env.development.local` → symlink para `.env.test.local` (chave de serviço no servidor local); preview em `npm run dev:test` (3100).
 - Próximo incremento: biblioteca de exercícios (seed free-exercise-db traduzido + exercícios próprios).
+- Deploy do incremento em produção: a `SUPABASE_SERVICE_ROLE_KEY` da Vercel estava vazia → convite dava erro 500 no aceite. Recadastrada via CLI (production + preview, valor nunca exibido), redeploy → **e2e 4/4 na produção**. A chave de serviço agora é necessária no servidor (decisão #10).
 
