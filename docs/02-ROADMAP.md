@@ -22,10 +22,12 @@ Critério de pronto: 3 alunos reais treinando 1 semana pelo app.
 - [ ] PWA: manifest + ícones + service worker (offline básico da tela de treino)
 - [x] Personal: "quem treinou nos últimos 7 dias" + últimos treinos e observações no detalhe do aluno (04/09)
 
-## Fase 2 · Diferencial ⚪
-- [ ] Limitações do aluno (cadastro + contraindicações por exercício)
-- [ ] Adaptação por IA: sugere substituições dentro do permitido, personal aprova com 1 toque
-- [ ] Evolução: gráfico de carga por exercício, recordes pessoais, medidas e fotos (bucket privado)
+## Fase 2 · Diferencial 🟡 (começou 04/09, adiantada)
+- [x] Limitações do aluno (personal cadastra; aluno informa em "Meu corpo") + contraindicações por exercício (876 da base marcadas por IA, vocabulário fixo) + aviso de conflito no editor (04/09)
+- [x] Adaptação: "Ver alternativas" filtra por grupo e sem conflito; "Trocar por este" herda séries/reps/posição; **IA sugere 3 com justificativa** (Claude API, só se ANTHROPIC_API_KEY) (04/09)
+- [ ] Revisar contraindicações da base com o amigo (são sugestões de IA); permitir editar tags de exercício da base sem duplicar
+- [x] Evolução: gráfico por exercício (carga máx./volume), recorde, delta desde o 1º registro, aluno e personal (04/09)
+- [ ] Medidas corporais e fotos (bucket privado)
 - [ ] Gamificação: XP por treino, badges, metas combinadas com o personal
 - [ ] 2º personal usando (validação fora do amigo)
 

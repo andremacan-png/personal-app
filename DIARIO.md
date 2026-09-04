@@ -67,3 +67,11 @@ André saiu por 4h e pediu produção contínua. Entregue, tudo com RLS testada 
 - Provas: vitest **35 testes** (unit + RLS de 6 tabelas contra o banco), e2e **5 specs** incluindo o fluxo completo personal→aluno em 2 navegadores (16 s).
 - Decisões implícitas a registrar: contas de aluno só via convite; um programa ativo por aluno; execução guarda snapshot do nome do dia/exercício (programa pode mudar depois).
 
+### 2026-09-04 (noite) · Fase 2 adiantada: limitações, adaptação com IA, evolução
+- Migração 0006 `aluno_limitacoes` (personal gerencia; aluno informa as próprias em "Meu corpo", RLS testada). Vocabulário fixo em `lib/limitacoes.ts` (joelho, ombro, lombar, quadril, cervical, punho, cotovelo, tornozelo, gestante, hipertensão, cardíaco, outro).
+- Base de exercícios marcada com contraindicações pela API (`scripts/exercicios/contraindicacoes.mjs`, US$ 1,58): 784/876 com pelo menos 1 tag; ombro 390, lombar 350, gestante 190, joelho 177... **São sugestões**: o amigo deve revisar os que mais usa.
+- Editor de programa avisa ⚠ por exercício em conflito e conta o total; "Ver alternativas" abre o seletor filtrado (mesmo grupo, sem conflito primeiro); "Trocar por este" herda séries/reps/descanso/observação e a posição. **Botão "Pedir 3 alternativas"** chama a Claude API (claude-opus-5) com o original, as limitações e os candidatos já filtrados pelas regras; devolve 3 com motivo em 1 frase. Funciona só onde há `ANTHROPIC_API_KEY`.
+- Evolução: `evolucaoPorExercicio` + gráfico recharts (carga máx. ou volume por treino, recorde, delta). Aluno em "Evolução", personal em "ver evolução" no detalhe do aluno.
+- Ajustes: overflow horizontal no mobile, último treino na lista de alunos, dica na home do aluno para informar limitações. E2E do fluxo completo agora cobre o conflito (limitação de ombro × exercício com contraindicação ombro).
+- Provas: vitest 38, e2e 5 specs (fluxo completo ~17 s local). Tudo no ar via push.
+
