@@ -21,7 +21,7 @@ Projeto tocado em conversas do Claude Code. Cada conversa lê este arquivo + mem
 
 ### 2026-09-04 · Kick-off (Fase 0)
 - 4 rodadas de perguntas com o André; decisões consolidadas em `docs/01-PRD.md` e `docs/04-DECISOES.md`.
-- Pasta `~/Documents/Projeto - APP Personal/` criada como raiz do repo. Next 16.2.6 + Tailwind 4 + shadcn + Supabase SSR + Vitest + Playwright instalados.
+- Pasta criada como raiz do repo (nasceu "Projeto - APP Personal", renomeada p/ `~/Documents/personal-app` no mesmo dia, sem espaços, padrão dos outros repos). Next 16.2.6 + Tailwind 4 + shadcn + Supabase SSR + Vitest + Playwright instalados.
 - Docs escritos: PRD, roadmap, modelo de dados, decisões (aulas), questionário pro amigo, modelo de negócio.
 - Correção do André no meio do caminho: **quem paga é o personal (~R$ 10 por aluno cadastrado)**, o aluno nunca paga; multi-tenant p/ muitos personais em paralelo. Docs ajustados (PRD, roadmap, modelo de dados, decisão #8, modelo de negócio).
 - Esqueleto: `proxy.ts` (sessão), DAL em `lib/auth/`, login/cadastro por Supabase Auth, landing por papel (`/personal`, `/aluno`), 1ª migração (`profiles`, `personals`, `alunos` + RLS), testes unitário + RLS + e2e, CI, manifest PWA.
