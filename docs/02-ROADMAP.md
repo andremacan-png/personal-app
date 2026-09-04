@@ -2,15 +2,15 @@
 
 Legenda: ⚪ não iniciada · 🟡 em andamento · ✅ pronta
 
-## Fase 0 · Fundação 🟡 (2026-09-04)
+## Fase 0 · Fundação ✅ (2026-09-04)
 Critério de pronto: CI verde, deploy na Vercel com login funcionando, RLS testada.
 - [x] Pasta + repo + Next 16 + Tailwind + shadcn + Supabase SSR + Vitest + Playwright
 - [x] Docs: PRD, roadmap, modelo de dados, decisões, questionário, modelo de negócio
 - [x] `proxy.ts` + DAL de auth + login/cadastro + landing por papel
 - [x] Migração 0001 (profiles, personals, alunos + RLS) + testes (unit, RLS, e2e)
 - [x] Banco: schema `personal` no projeto compartilhado `instagram-isabel` (provisório, decisão #6); migração 0001 aplicada 04/09
-- [ ] Expor schema `personal` na Data API (painel, André) e rodar o teste de RLS contra o banco
-- [ ] Repo GitHub + Vercel + CI verde no 1º push (André autoriza)
+- [x] Schema `personal` exposto na Data API; teste de RLS 10/10 contra o banco
+- [x] Repo GitHub `andremacan-png/personal-app` + Vercel (produção pública em personal-app-ebon-two.vercel.app) + e2e 3/3 na produção
 
 ## Fase 1 · Piloto ⚪ (alvo: 2-3 semanas)
 Critério de pronto: 3 alunos reais treinando 1 semana pelo app.

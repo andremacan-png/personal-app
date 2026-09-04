@@ -5,15 +5,16 @@ Projeto tocado em conversas do Claude Code. Cada conversa lê este arquivo + mem
 ## Frentes
 | Frente | Estado | Onde |
 |---|---|---|
-| Fundação (repo, docs, auth, CI, deploy) | 🟡 em andamento | `docs/02-ROADMAP.md` Fase 0 |
-| Piloto (treino + execução + streak) | ⚪ não iniciada | Fase 1 |
+| Fundação (repo, docs, auth, CI, deploy) | ✅ concluída 04/09 | `docs/02-ROADMAP.md` Fase 0 |
+| Piloto (treino + execução + streak) | 🟡 próxima | Fase 1 |
 | Diferencial (evolução, gamificação, IA) | ⚪ | Fase 2 |
 | Dinheiro (Asaas) | ⚪ | Fase 3 |
 | Escala (lembretes, nativo) | ⚪ | Fase 4 |
 
 ## Pendências abertas
-- [ ] André: expor o schema `personal` na Data API do projeto `instagram-isabel` (Integrations → Data API → Settings → Exposed schemas)
-- [ ] Vercel: projeto `personal-app` ligado ao repo + variáveis cadastradas; **falta o push do André** para o 1º deploy (URL sai depois)
+- [ ] Fase 1: definir Site URL / Redirect URLs do Auth para o APP Personal (o projeto Supabase é compartilhado; hoje o e-mail de confirmação apontaria pro site da esteira) → fluxo de convite do aluno deve usar link próprio
+- [ ] Vercel: `SUPABASE_SERVICE_ROLE_KEY` foi cadastrada pelo André mas o app não usa; remover ou manter só se algum job precisar
+- [ ] Domínio próprio quando o nome estiver decidido (tira a produção da URL `.vercel.app`)
 - [ ] Fase 3: migrar o banco para org Supabase própria (Pro) quando pagar a conta
 - [ ] Amigo: responder `docs/05-QUESTIONARIO-AMIGO.md`
 - [ ] Definir preço por aluno e faixa grátis (`docs/06-MODELO-NEGOCIO.md`)
@@ -40,3 +41,11 @@ Projeto tocado em conversas do Claude Code. Cada conversa lê este arquivo + mem
 - Lições: (1) insert em lote no supabase-js manda `null` nas colunas ausentes em alguma linha, o DEFAULT não se aplica; (2) quando USING acha a linha e WITH CHECK barra, o Postgres devolve erro, não 0 linhas; (3) `describe.skip` executa o corpo.
 - Seed do personal de teste do e2e: `npm run seed:e2e` (lê `.env.test.local`).
 - E2E 3/3 contra o preview (visitante → login; senha errada → erro; personal real → `/personal`). Vercel: projeto `personal-app` (time andre-macan-s-projects) linkado ao repo GitHub, env `NEXT_PUBLIC_SUPABASE_*` em production+preview. Deploy acontece no próximo push.
+
+### 2026-09-04 · Produção no ar (fim da Fase 0)
+- **URL pública: https://personal-app-ebon-two.vercel.app** (alias também em personal-app-andre-macan-s-projects.vercel.app). Deploy automático a cada push na `main`.
+- Proteção da Vercel mudada (autorizada pelo André) de "todos os deploys" para **só previews**; produção aberta.
+- 1º deploy deu 500: as variáveis `NEXT_PUBLIC_SUPABASE_*` estavam vazias no projeto. Recriadas via CLI (production + preview) e redeploy → **e2e 3/3 contra a produção** (visitante → login; senha errada; personal real → `/personal`).
+- Lição: `vercel env pull` traz variáveis "sensitive" vazias, então o teste é sempre a URL respondendo; e `vercel redeploy` não aceita `--yes`.
+- Fase 0 fechada. Próximo passo = Fase 1 (convite de aluno, biblioteca, programa, treino do dia), começando pelas respostas do questionário do amigo.
+
