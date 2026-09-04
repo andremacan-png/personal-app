@@ -20,6 +20,7 @@ test("personal cria exercício e programa; aluno executa o treino e vê o histó
   await page.goto("/personal/exercicios/novo");
   await page.getByLabel("Nome").fill(`Supino E2E ${sufixo}`);
   await page.getByLabel("Como executar", { exact: false }).fill("Deite no banco\nDesça a barra até o peito");
+  await page.getByLabel(/Contraindicações/).fill("ombro");
   await page.getByRole("button", { name: "Criar exercício" }).click();
   await expect(page.getByRole("heading", { name: `Supino E2E ${sufixo}` })).toBeVisible();
 
@@ -31,6 +32,12 @@ test("personal cria exercício e programa; aluno executa o treino e vê o histó
   await page.locator("li", { hasText: `Carla E2E ${sufixo}` }).getByRole("link", { name: `Carla E2E ${sufixo}` }).click();
   await expect(page.getByRole("heading", { name: `Carla E2E ${sufixo}` })).toBeVisible();
   const alunoUrl = page.url();
+
+  // personal: registra limitação de ombro → o editor deve avisar conflito
+  await page.getByRole("combobox", { name: /Região/ }).selectOption("ombro");
+  await page.getByPlaceholder("ex.: dor ao agachar fundo").fill("tendinite");
+  await page.getByRole("button", { name: "Adicionar" }).click();
+  await expect(page.getByText("Ombro", { exact: true })).toBeVisible();
 
   // personal: programa com 2 dias e 1 exercício no dia A
   await page.getByLabel("Novo programa").fill("Hipertrofia E2E");
@@ -47,6 +54,8 @@ test("personal cria exercício e programa; aluno executa o treino e vê o histó
   await page.locator("input[name=carga]").first().fill("30 kg");
   await page.locator("li form").filter({ has: page.locator("input[name=series]") }).first().getByRole("button", { name: "Salvar" }).click();
   await expect(page.locator("input[name=series]").first()).toHaveValue("2");
+  await expect(page.getByText(/Cuidado com Ombro/)).toBeVisible();
+  await expect(page.getByText(/1 exercício\(s\) com possível conflito/)).toBeVisible();
 
   // pega o token do convite pela página do aluno (link no WhatsApp)
   await page.goto(alunoUrl);

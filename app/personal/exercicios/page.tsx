@@ -12,7 +12,6 @@ export default async function PaginaExercicios({ searchParams }: { searchParams:
     listarExercicios({ busca: q, grupo: grupo || undefined, origem: origem as "todos" | "meus" | "base" }),
     contarExercicios(),
   ]);
-  const link = (p: Record<string, string>) => "?" + new URLSearchParams({ q, grupo, origem, ...p }).toString();
 
   return (
     <main className="mx-auto max-w-4xl p-6">
@@ -26,7 +25,7 @@ export default async function PaginaExercicios({ searchParams }: { searchParams:
       </header>
 
       <form className="mt-4 flex flex-wrap gap-2" action="/personal/exercicios">
-        <Input name="q" defaultValue={q} placeholder="Buscar por nome..." className="max-w-xs" />
+        <Input name="q" defaultValue={q} placeholder="Buscar por nome..." className="w-full sm:max-w-xs" />
         <select name="grupo" defaultValue={grupo} className="h-9 rounded-md border bg-white px-2 text-sm">
           <option value="">Todos os grupos</option>
           {GRUPOS.map((g) => <option key={g} value={g}>{g}</option>)}
@@ -43,10 +42,10 @@ export default async function PaginaExercicios({ searchParams }: { searchParams:
       {lista.length === 0 ? (
         <p className="mt-8 text-center text-neutral-500">Nada encontrado.</p>
       ) : (
-        <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+        <ul className="mt-4 grid min-w-0 gap-3 sm:grid-cols-2">
           {lista.map((e) => (
-            <li key={e.id}>
-              <Link href={`/personal/exercicios/${e.id}`} className="flex gap-3 rounded-lg border p-3 hover:bg-neutral-50">
+            <li key={e.id} className="min-w-0">
+              <Link href={`/personal/exercicios/${e.id}`} className="flex min-w-0 gap-3 rounded-lg border p-3 hover:bg-neutral-50">
                 {e.imagens[0] ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img src={e.imagens[0]} alt="" className="h-16 w-16 flex-none rounded object-cover bg-neutral-100" loading="lazy" />
@@ -64,7 +63,6 @@ export default async function PaginaExercicios({ searchParams }: { searchParams:
         </ul>
       )}
       {lista.length >= 60 && <p className="mt-3 text-center text-sm text-neutral-500">Mostrando os 60 primeiros. Refine a busca.</p>}
-      <p className="sr-only">{link({})}</p>
     </main>
   );
 }

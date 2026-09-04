@@ -36,7 +36,7 @@ export default async function PaginaAdicionarExercicio({ params, searchParams }:
       </form>
       <ul className="mt-4 divide-y rounded-lg border">
         {lista.map((e) => (
-          <li key={e.id} className="flex items-center gap-3 p-2">
+          <li key={e.id} className="flex min-w-0 items-center gap-3 p-2">
             {e.imagens[0] ? (
               // eslint-disable-next-line @next/next/no-img-element
               <img src={e.imagens[0]} alt="" className="h-12 w-12 flex-none rounded bg-neutral-100 object-cover" loading="lazy" />

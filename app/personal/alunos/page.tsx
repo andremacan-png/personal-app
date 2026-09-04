@@ -6,12 +6,16 @@ import { linkConvite, linkWhatsApp, mensagemConvite } from "@/lib/convite";
 import { buttonVariants } from "@/components/ui/button";
 import { BotaoCopiar } from "@/components/botao-copiar";
 import { NavPersonal } from "@/components/nav-personal";
+import { execucoesDoTenant } from "@/lib/dal/execucoes";
+import { rotuloRelativo } from "@/lib/datas";
 
 const ROTULO: Record<string, string> = { convidado: "Convite pendente", ativo: "Ativo", pausado: "Pausado", encerrado: "Encerrado" };
 
 export default async function PaginaAlunos({ searchParams }: { searchParams: Promise<{ novo?: string }> }) {
   await exigirUsuario("personal");
-  const [{ novo }, alunos, personal, base] = await Promise.all([searchParams, listarAlunos(), meuPersonal(), urlBase()]);
+  const [{ novo }, alunos, personal, base, execs] = await Promise.all([searchParams, listarAlunos(), meuPersonal(), urlBase(), execucoesDoTenant(60)]);
+  const ultimo = new Map<string, string>();
+  for (const e of execs) if (e.concluido_em && !ultimo.has(e.aluno_id)) ultimo.set(e.aluno_id, e.concluido_em);
 
   return (
     <main className="mx-auto max-w-3xl p-6">
@@ -35,7 +39,7 @@ export default async function PaginaAlunos({ searchParams }: { searchParams: Pro
               <li key={a.id} className={`flex flex-col gap-3 p-4 sm:flex-row sm:items-center sm:justify-between ${destaque ? "bg-amber-50" : ""}`}>
                 <div>
                   <Link href={`/personal/alunos/${a.id}`} className="font-medium hover:underline">{a.nome}</Link>
-                  <p className="text-sm text-neutral-500">{ROTULO[a.status] ?? a.status}{a.telefone ? ` · ${a.telefone}` : ""}</p>
+                  <p className="text-sm text-neutral-500">{ROTULO[a.status] ?? a.status}{a.telefone ? ` · ${a.telefone}` : ""}{a.status === "ativo" ? ` · último treino: ${rotuloRelativo(ultimo.get(a.id))}` : ""}</p>
                 </div>
                 {a.status === "convidado" && (
                   <div className="flex flex-wrap gap-2">

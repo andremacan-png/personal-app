@@ -6,6 +6,7 @@ import { listarExecucoes, meuAlunoId, ultimaExecucaoPorDia } from "@/lib/dal/exe
 import { rotuloRelativo } from "@/lib/datas";
 import { resumirConsistencia } from "@/lib/streak";
 import { CalendarioPresenca } from "@/components/calendario-presenca";
+import { listarLimitacoes } from "@/lib/dal/limitacoes";
 import { sair } from "@/app/login/actions";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { NavAluno } from "@/components/nav-aluno";
@@ -17,6 +18,7 @@ export default async function InicioAluno() {
   const ultimas: Record<string, string> = alunoId ? await ultimaExecucaoPorDia(alunoId, programa?.dias.map((d) => d.id) ?? []) : {};
   const recentes = alunoId ? await listarExecucoes(alunoId, 5) : [];
   const historico = alunoId ? await listarExecucoes(alunoId, 200) : [];
+  const limitacoes = alunoId ? await listarLimitacoes(alunoId) : [];
   const consistencia = resumirConsistencia(historico.map((e) => e.concluido_em!), programa?.dias.length ?? 1);
   // Sugestão simples: o dia menos recente (ou o primeiro nunca feito)
   const sugerido = programa?.dias.length
@@ -59,6 +61,12 @@ export default async function InicioAluno() {
             })}
           </ul>
         </>
+      )}
+
+      {alunoId && personal && limitacoes.length === 0 && (
+        <Link href="/aluno/perfil" className="mt-4 block rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900">
+          Sente dor ou tem alguma restrição (joelho, ombro, lombar...)? <span className="underline">Conte aqui</span> para {personal.nome.split(" ")[0]} adaptar seu treino.
+        </Link>
       )}
 
       {alunoId && programa && (
