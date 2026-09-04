@@ -19,7 +19,7 @@ describe("ehRotaPublica", () => {
     expect(ehRotaPublica("/auth/callback")).toBe(true);
   });
   it("o resto exige sessão", () => {
-    expect(ehRotaPublica("/")).toBe(false);
+    expect(ehRotaPublica("/")).toBe(true); // landing pública
     expect(ehRotaPublica("/personal")).toBe(false);
     expect(ehRotaPublica("/loginx")).toBe(false);
   });

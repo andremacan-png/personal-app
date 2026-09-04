@@ -2,10 +2,10 @@
 
 export type Papel = "personal" | "aluno";
 
-const ROTAS_PUBLICAS = ["/login", "/cadastro", "/auth/callback", "/convite"];
+const ROTAS_PUBLICAS = ["/", "/login", "/cadastro", "/auth/callback", "/convite"];
 
 export function ehRotaPublica(caminho: string): boolean {
-  return ROTAS_PUBLICAS.some((p) => caminho === p || caminho.startsWith(p + "/"));
+  return ROTAS_PUBLICAS.some((p) => caminho === p || (p !== "/" && caminho.startsWith(p + "/")));
 }
 
 export function rotaInicial(papel: Papel | null | undefined): string {
