@@ -12,7 +12,7 @@ async function entrar(page: Page, e: string, s: string) {
 test("personal cria exercício e programa; aluno executa o treino e vê o histórico", async ({ page, browser }) => {
   test.skip(!email || !senha, "precisa do personal de teste (npm run seed:e2e)");
   test.setTimeout(120000);
-  const sufixo = Date.now().toString(36);
+  const sufixo = Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
 
   // personal: exercício próprio
   await entrar(page, email!, senha!);

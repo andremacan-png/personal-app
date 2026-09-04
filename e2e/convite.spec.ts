@@ -4,7 +4,7 @@ const email = process.env.E2E_PERSONAL_EMAIL, senha = process.env.E2E_PERSONAL_S
 
 test("personal cadastra aluno, aluno aceita convite e cai no app", async ({ page, browser }) => {
   test.skip(!email || !senha, "precisa do personal de teste (npm run seed:e2e)");
-  const sufixo = Date.now().toString(36);
+  const sufixo = Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
 
   // 1. personal entra e cadastra o aluno
   await page.goto("/login");
