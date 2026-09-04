@@ -8,7 +8,8 @@ Critério de pronto: CI verde, deploy na Vercel com login funcionando, RLS testa
 - [x] Docs: PRD, roadmap, modelo de dados, decisões, questionário, modelo de negócio
 - [x] `proxy.ts` + DAL de auth + login/cadastro + landing por papel
 - [x] Migração 0001 (profiles, personals, alunos + RLS) + testes (unit, RLS, e2e)
-- [ ] Projeto Supabase próprio criado e migração aplicada (André)
+- [x] Banco: schema `personal` no projeto compartilhado `instagram-isabel` (provisório, decisão #6); migração 0001 aplicada 04/09
+- [ ] Expor schema `personal` na Data API (painel, André) e rodar o teste de RLS contra o banco
 - [ ] Repo GitHub + Vercel + CI verde no 1º push (André autoriza)
 
 ## Fase 1 · Piloto ⚪ (alvo: 2-3 semanas)
@@ -29,6 +30,7 @@ Critério de pronto: 3 alunos reais treinando 1 semana pelo app.
 - [ ] 2º personal usando (validação fora do amigo)
 
 ## Fase 3 · Dinheiro ⚪
+- [ ] Mudar o banco para org Supabase própria (Pro) quando ~14 alunos pagarem a conta; exportar o schema `personal`
 - [ ] Assinatura do app: R$ 10 × alunos cadastrados, cobrada do personal todo mês (cartão/Pix via Asaas), webhook
 - [ ] Contagem de alunos cobráveis (status, data de corte) + fatura visível pro personal
 - [ ] Opcional, a confirmar: personal cobra o próprio aluno pelo app (Asaas subconta, Pix/cartão)

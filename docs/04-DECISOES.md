@@ -36,6 +36,12 @@ reaproveitada no nativo.
 **O que**: org Supabase, projeto Vercel e repo GitHub próprios.
 **Por quê**: fatura, risco e propriedade separados. Se o app virar empresa ou ganhar sócio, transfere
 limpo. Misturar com a clínica seria economizar 10 minutos hoje e pagar dias depois.
+**Ajuste no mesmo dia (provisório)**: o plano grátis do Supabase limita a 2 projetos e ambos já estão em uso.
+Até o app pagar a própria conta (~14 alunos × R$ 10 ≈ US$ 25/mês do Pro), as tabelas vivem no **schema
+`personal` dentro do projeto `instagram-isabel`**, que não usa Auth para nada. O código já nasce apontando
+para o schema (`lib/supabase/config.ts`); mudar de casa depois é exportar o schema e trocar 2 variáveis.
+**Aula**: separar por schema é a segunda melhor forma de isolar; a primeira é projeto próprio. Registrar o
+provisório com data e critério de saída evita que ele vire definitivo por esquecimento.
 
 ## 7. Next.js 16 com `proxy.ts` e DAL (2026-09-04)
 **O que**: `proxy.ts` (novo nome do middleware) só renova sessão e redireciona; a checagem real de

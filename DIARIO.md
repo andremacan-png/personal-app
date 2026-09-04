@@ -12,8 +12,9 @@ Projeto tocado em conversas do Claude Code. Cada conversa lê este arquivo + mem
 | Escala (lembretes, nativo) | ⚪ | Fase 4 |
 
 ## Pendências abertas
-- [ ] André: criar org + projeto Supabase separado da clínica e passar URL + chave publicável (ver `docs/04-DECISOES.md` #6)
-- [ ] André: repo GitHub privado + projeto Vercel (o CLI `gh` não está instalado; Vercel CLI está)
+- [ ] André: expor o schema `personal` na Data API do projeto `instagram-isabel` (Integrations → Data API → Settings → Exposed schemas)
+- [ ] Vercel: criar projeto ligado ao repo + variáveis de ambiente
+- [ ] Fase 3: migrar o banco para org Supabase própria (Pro) quando pagar a conta
 - [ ] Amigo: responder `docs/05-QUESTIONARIO-AMIGO.md`
 - [ ] Definir preço por aluno e faixa grátis (`docs/06-MODELO-NEGOCIO.md`)
 
@@ -28,4 +29,11 @@ Projeto tocado em conversas do Claude Code. Cada conversa lê este arquivo + mem
 - Provas: lint ✅ · tsc ✅ · vitest 5/5 ✅ (RLS pulado sem banco) · `next build` ✅ · Playwright 2/2 ✅ (login seed pulado) · preview mobile OK.
 - Como rodar o e2e com o preview aberto: `E2E_BASE_URL=http://localhost:3100 npx playwright test` (o Next 16 trava um 2º `next dev` na mesma pasta). Preview desta pasta está registrado no `launch.json` da clínica como `personal-app` (porta 3100) enquanto as conversas ainda abrem por lá.
 - Lição: `describe.skip` do Vitest ainda executa o corpo do describe (criar clientes só no `beforeAll`); `CardTitle` do shadcn é `div`, não heading (pôr `h1` dentro); o Next injeta um `role="alert"` próprio (filtrar por texto no e2e).
+
+### 2026-09-04 · Banco provisório no projeto compartilhado
+- Supabase grátis = 2 projetos, ambos ocupados (clínica e esteira). Avaliadas alternativas (Pro US$ 25, Neon, Fly.io, self-host); decisão: **schema `personal` dentro do projeto `instagram-isabel`** até o app pagar a própria conta (decisão #6).
+- Migração `personal_0001_fundacao` aplicada via conector com autorização do André: 3 tabelas, 8 policies, RLS on, gatilho `personal_ao_criar_usuario` em `auth.users` (só age se `metadata.papel` existir).
+- Clientes e teste de RLS usam `db.schema = "personal"` (`lib/supabase/config.ts`).
+- Repo no GitHub: `andremacan-png/personal-app` (push é do André; a trava não deixa eu enviar).
+- Questionário do amigo também em PDF (`docs/`) e Google Doc.
 
