@@ -5,6 +5,7 @@ import { urlBase } from "@/lib/url";
 import { linkConvite, linkWhatsApp, mensagemConvite } from "@/lib/convite";
 import { buttonVariants } from "@/components/ui/button";
 import { BotaoCopiar } from "@/components/botao-copiar";
+import { NavPersonal } from "@/components/nav-personal";
 
 const ROTULO: Record<string, string> = { convidado: "Convite pendente", ativo: "Ativo", pausado: "Pausado", encerrado: "Encerrado" };
 
@@ -14,11 +15,9 @@ export default async function PaginaAlunos({ searchParams }: { searchParams: Pro
 
   return (
     <main className="mx-auto max-w-3xl p-6">
-      <header className="flex items-center justify-between gap-4">
-        <div>
-          <Link href="/personal" className="text-sm text-neutral-500 hover:underline">← Início</Link>
-          <h1 className="text-2xl font-semibold">Alunos</h1>
-        </div>
+      <NavPersonal atual="/personal/alunos" />
+      <header className="mt-4 flex items-center justify-between gap-4">
+        <h1 className="text-2xl font-semibold">Alunos</h1>
         <Link href="/personal/alunos/novo" className={buttonVariants()}>Novo aluno</Link>
       </header>
 
