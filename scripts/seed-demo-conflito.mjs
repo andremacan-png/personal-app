@@ -1,0 +1,12 @@
+import { createClient } from "@supabase/supabase-js";
+const admin = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY, { db: { schema: "personal" }, auth: { persistSession: false } });
+const { data: u } = await admin.auth.admin.listUsers({ perPage: 1000 });
+const per = u.users.find((x) => x.email === "e2e-personal@teste.local");
+const { data: pe } = await admin.from("personals").select("id").eq("profile_id", per.id).single();
+const { data: al } = await admin.from("alunos").insert({ personal_id: pe.id, nome: "Carla E2E demo", status: "ativo" }).select("id").single();
+await admin.from("aluno_limitacoes").insert({ aluno_id: al.id, regiao: "ombro", descricao: "tendinite" });
+const { data: pr } = await admin.from("programas").insert({ personal_id: pe.id, aluno_id: al.id, nome: "Hipertrofia demo" }).select("id").single();
+const { data: dia } = await admin.from("programa_dias").insert({ programa_id: pr.id, ordem: 1, nome: "Treino A" }).select("id").single();
+const { data: ex } = await admin.from("exercicios").select("id, nome").is("personal_id", null).contains("contraindicacoes", ["ombro"]).eq("grupo_muscular", "Peito").limit(1).single();
+const { data: item } = await admin.from("programa_exercicios").insert({ programa_dia_id: dia.id, exercicio_id: ex.id, series: 3, repeticoes: "10" }).select("id").single();
+console.log(JSON.stringify({ programa: pr.id, dia: dia.id, item: item.id, exercicio: ex.nome }));
