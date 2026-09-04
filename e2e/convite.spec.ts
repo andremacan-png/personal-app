@@ -32,7 +32,7 @@ test("personal cadastra aluno, aluno aceita convite e cai no app", async ({ page
   await aluno.getByLabel("Senha").fill("senha-aluno-12345");
   await aluno.getByRole("button", { name: /Criar conta e entrar/ }).click();
   await expect(aluno).toHaveURL(/\/aluno$/);
-  await expect(aluno.getByText(/Você treina com/)).toBeVisible();
+  await expect(aluno.getByText(/ainda não montou seu programa/)).toBeVisible();
 
   // 3. convite não vale mais; personal vê o aluno ativo
   await aluno.context().clearCookies();
