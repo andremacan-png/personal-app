@@ -6,12 +6,16 @@ Projeto tocado em conversas do Claude Code. Cada conversa lê este arquivo + mem
 | Frente | Estado | Onde |
 |---|---|---|
 | Fundação (repo, docs, auth, CI, deploy) | ✅ concluída 04/09 | `docs/02-ROADMAP.md` Fase 0 |
-| Piloto (treino + execução + streak) | 🟡 6/7 itens (falta PWA offline) | Fase 1 |
-| Diferencial (evolução, gamificação, IA) | ⚪ | Fase 2 |
+| Piloto (treino + execução + streak) | ✅ funcional (falta só service worker offline) | Fase 1 |
+| Diferencial (evolução, gamificação, IA) | 🟡 adiantada: limitações+IA ✅, evolução ✅, conquistas ✅ | Fase 2 |
 | Dinheiro (Asaas) | ⚪ | Fase 3 |
 | Escala (lembretes, nativo) | ⚪ | Fase 4 |
 
 ## Pendências abertas
+- [ ] **Sessão de feedback com o amigo** no protótipo (produção). Roteiro: criar conta → cadastrar aluno → mandar convite → montar programa (copiar/IA) → aluno treina no celular → ver evolução
+- [ ] Revisar com o amigo as contraindicações da base (sugestões de IA) nos 30 exercícios que ele mais usa
+- [ ] Service worker (offline da tela de treino) e ícone/nome definitivos do PWA
+- [ ] `seed:e2e` troca a senha do personal de teste e derruba a sessão dele (inofensivo, mas confunde ao testar no navegador)
 - [ ] Fase 1: definir Site URL / Redirect URLs do Auth para o APP Personal (o projeto Supabase é compartilhado; hoje o e-mail de confirmação apontaria pro site da esteira) → fluxo de convite do aluno deve usar link próprio
 - [ ] Domínio próprio quando o nome estiver decidido (tira a produção da URL `.vercel.app`)
 - [ ] Fase 3: migrar o banco para org Supabase própria (Pro) quando pagar a conta
@@ -77,4 +81,10 @@ André saiu por 4h e pediu produção contínua. Entregue, tudo com RLS testada 
 - Também: **conquistas** derivadas dos dados (`lib/conquistas.ts`, sem tabela: 1º treino, 5/10/25/50/100 treinos, 2/4/8/12 semanas seguidas, semana cheia, recorde nos últimos 7 dias) na home do aluno; **copiar programa** de outro aluno como modelo (cargas não vêm junto); **landing pública** na raiz com CTA de cadastro; PWA: manifest e ícones servidos em produção (sem service worker ainda).
 - Chaves: `ANTHROPIC_API_KEY` posta em production+preview na Vercel e no `.env.test.local` (via pipe, sem exibir). IA de alternativas funciona em produção.
 - Lição: `<Link>` do Next pré-carrega a rota; um link para `?ia=1` disparava a chamada à IA só de aparecer na tela. Virou ação de formulário.
+
+### 2026-09-04 (noite) · Fechamento da sessão autônoma
+- Estado: **protótipo completo e navegável em produção** (https://personal-app-ebon-two.vercel.app). Personal: cadastro, alunos, convite WhatsApp, biblioteca (876 + próprios), programas (dias/exercícios/cópia), limitações, alertas de conflito, troca com regras + IA, quem treinou, evolução. Aluno: convite → conta, treino do dia com cargas anteriores e rascunho local, histórico, streak/calendário, conquistas, evolução, "Meu corpo". Landing pública.
+- Provas finais: vitest 42 (unit + RLS de 7 tabelas contra o banco), e2e 5 specs verdes local e em produção (fluxo completo com IA). Banco limpo de dados de teste.
+- Custos de IA da sessão: ~US$ 9,30 (tradução US$ 7,70 + contraindicações US$ 1,58); sugestões em tempo real custam centavos por pedido.
+- Lições do dia (para `docs/04-DECISOES.md` quando houver tempo): body em flex-col alargava o main no mobile; Link do Next pré-carrega rotas (nunca colocar efeito caro atrás de um Link); `updateUserById(password)` derruba a sessão.
 
