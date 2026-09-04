@@ -1,0 +1,3403 @@
+{
+ "Back_Flyes_-_With_Bands": [
+  "ombro"
+ ],
+ "Backward_Drag": [
+  "joelho",
+  "lombar",
+  "hipertensao"
+ ],
+ "Backward_Medicine_Ball_Throw": [
+  "ombro",
+  "lombar",
+  "gestante"
+ ],
+ "Balance_Board": [
+  "tornozelo",
+  "joelho"
+ ],
+ "Ball_Leg_Curl": [
+  "joelho",
+  "lombar",
+  "gestante"
+ ],
+ "Band_Assisted_Pull-Up": [
+  "ombro",
+  "cotovelo",
+  "punho"
+ ],
+ "Band_Good_Morning": [
+  "lombar",
+  "quadril"
+ ],
+ "Band_Good_Morning_Pull_Through": [
+  "lombar",
+  "quadril"
+ ],
+ "Band_Hip_Adductions": [
+  "quadril"
+ ],
+ "Band_Pull_Apart": [],
+ "Band_Skull_Crusher": [
+  "cotovelo",
+  "ombro"
+ ],
+ "Barbell_Ab_Rollout": [
+  "lombar",
+  "ombro",
+  "gestante"
+ ],
+ "Barbell_Ab_Rollout_-_On_Knees": [
+  "lombar",
+  "joelho",
+  "gestante"
+ ],
+ "Barbell_Bench_Press_-_Medium_Grip": [
+  "ombro",
+  "punho",
+  "gestante"
+ ],
+ "Barbell_Curl": [
+  "cotovelo",
+  "punho"
+ ],
+ "Barbell_Curls_Lying_Against_An_Incline": [
+  "cotovelo",
+  "ombro"
+ ],
+ "Barbell_Deadlift": [
+  "lombar",
+  "quadril",
+  "hipertensao"
+ ],
+ "Barbell_Full_Squat": [
+  "joelho",
+  "lombar",
+  "hipertensao"
+ ],
+ "Barbell_Glute_Bridge": [
+  "lombar",
+  "quadril",
+  "gestante"
+ ],
+ "Barbell_Guillotine_Bench_Press": [
+  "ombro",
+  "gestante"
+ ],
+ "Barbell_Hack_Squat": [
+  "joelho",
+  "lombar",
+  "punho"
+ ],
+ "Barbell_Hip_Thrust": [
+  "quadril",
+  "lombar",
+  "gestante"
+ ],
+ "Barbell_Incline_Bench_Press_-_Medium_Grip": [
+  "ombro",
+  "punho"
+ ],
+ "Barbell_Incline_Shoulder_Raise": [
+  "ombro"
+ ],
+ "Barbell_Lunge": [
+  "joelho",
+  "quadril",
+  "lombar"
+ ],
+ "Barbell_Rear_Delt_Row": [
+  "lombar",
+  "ombro"
+ ],
+ "Barbell_Rollout_from_Bench": [
+  "lombar",
+  "ombro",
+  "gestante"
+ ],
+ "Barbell_Seated_Calf_Raise": [
+  "tornozelo",
+  "joelho"
+ ],
+ "Barbell_Shoulder_Press": [
+  "ombro",
+  "cervical",
+  "hipertensao"
+ ],
+ "Barbell_Shrug": [
+  "cervical",
+  "lombar"
+ ],
+ "3_4_Sit-Up": [
+  "lombar",
+  "cervical",
+  "gestante"
+ ],
+ "90_90_Hamstring": [],
+ "Ab_Crunch_Machine": [
+  "lombar",
+  "cervical"
+ ],
+ "Ab_Roller": [
+  "lombar",
+  "ombro",
+  "gestante"
+ ],
+ "Adductor": [],
+ "Adductor_Groin": [],
+ "Advanced_Kettlebell_Windmill": [
+  "lombar",
+  "ombro",
+  "gestante"
+ ],
+ "Air_Bike": [
+  "lombar",
+  "cervical",
+  "gestante"
+ ],
+ "All_Fours_Quad_Stretch": [
+  "joelho"
+ ],
+ "Alternate_Hammer_Curl": [
+  "cotovelo"
+ ],
+ "Alternate_Heel_Touchers": [
+  "cervical",
+  "lombar",
+  "gestante"
+ ],
+ "Alternate_Incline_Dumbbell_Curl": [
+  "cotovelo",
+  "ombro"
+ ],
+ "Alternate_Leg_Diagonal_Bound": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Alternating_Cable_Shoulder_Press": [
+  "ombro",
+  "lombar"
+ ],
+ "Alternating_Deltoid_Raise": [
+  "ombro"
+ ],
+ "Alternating_Floor_Press": [
+  "ombro",
+  "gestante"
+ ],
+ "Alternating_Hang_Clean": [
+  "lombar",
+  "punho",
+  "joelho"
+ ],
+ "Alternating_Kettlebell_Press": [
+  "ombro",
+  "lombar"
+ ],
+ "Alternating_Kettlebell_Row": [
+  "lombar"
+ ],
+ "Alternating_Renegade_Row": [
+  "punho",
+  "ombro",
+  "lombar"
+ ],
+ "Ankle_Circles": [],
+ "Ankle_On_The_Knee": [
+  "quadril"
+ ],
+ "Anterior_Tibialis-SMR": [],
+ "Anti-Gravity_Press": [
+  "ombro",
+  "lombar",
+  "hipertensao"
+ ],
+ "Arm_Circles": [],
+ "Arnold_Dumbbell_Press": [
+  "ombro"
+ ],
+ "Around_The_Worlds": [
+  "ombro",
+  "gestante"
+ ],
+ "Atlas_Stone_Trainer": [
+  "lombar",
+  "quadril"
+ ],
+ "Atlas_Stones": [
+  "lombar",
+  "joelho",
+  "hipertensao"
+ ],
+ "Axle_Deadlift": [
+  "lombar",
+  "punho",
+  "hipertensao"
+ ],
+ "Barbell_Shrug_Behind_The_Back": [
+  "ombro",
+  "cervical"
+ ],
+ "Barbell_Side_Bend": [
+  "lombar"
+ ],
+ "Barbell_Side_Split_Squat": [
+  "joelho",
+  "quadril",
+  "lombar"
+ ],
+ "Barbell_Squat": [
+  "joelho",
+  "lombar",
+  "hipertensao"
+ ],
+ "Barbell_Squat_To_A_Bench": [
+  "joelho",
+  "lombar",
+  "hipertensao"
+ ],
+ "Barbell_Step_Ups": [
+  "joelho",
+  "lombar"
+ ],
+ "Barbell_Walking_Lunge": [
+  "joelho",
+  "quadril",
+  "lombar"
+ ],
+ "Battling_Ropes": [
+  "ombro",
+  "hipertensao"
+ ],
+ "Bear_Crawl_Sled_Drags": [
+  "ombro",
+  "punho",
+  "lombar"
+ ],
+ "Behind_Head_Chest_Stretch": [
+  "ombro"
+ ],
+ "Bench_Dips": [
+  "ombro",
+  "punho",
+  "cotovelo"
+ ],
+ "Bench_Jump": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Bench_Press_-_Powerlifting": [
+  "ombro",
+  "punho",
+  "gestante"
+ ],
+ "Bench_Press_-_With_Bands": [
+  "ombro",
+  "punho",
+  "gestante"
+ ],
+ "Bench_Press_with_Chains": [
+  "ombro",
+  "punho",
+  "gestante"
+ ],
+ "Bench_Sprint": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Bent-Arm_Barbell_Pullover": [
+  "ombro",
+  "lombar",
+  "gestante"
+ ],
+ "Bent-Arm_Dumbbell_Pullover": [
+  "ombro",
+  "gestante"
+ ],
+ "Bent-Knee_Hip_Raise": [
+  "lombar",
+  "gestante"
+ ],
+ "Bent_Over_Barbell_Row": [
+  "lombar",
+  "ombro"
+ ],
+ "Bent_Over_Dumbbell_Rear_Delt_Raise_With_Head_On_Bench": [
+  "ombro"
+ ],
+ "Bent_Over_Low-Pulley_Side_Lateral": [
+  "ombro",
+  "lombar"
+ ],
+ "Bent_Over_One-Arm_Long_Bar_Row": [
+  "lombar",
+  "ombro"
+ ],
+ "Bent_Over_Two-Arm_Long_Bar_Row": [
+  "lombar",
+  "ombro"
+ ],
+ "Bent_Over_Two-Dumbbell_Row": [
+  "lombar"
+ ],
+ "Bent_Over_Two-Dumbbell_Row_With_Palms_In": [
+  "lombar"
+ ],
+ "Bent_Press": [
+  "ombro",
+  "lombar",
+  "punho"
+ ],
+ "Bicycling": [
+  "joelho"
+ ],
+ "Bicycling_Stationary": [
+  "joelho"
+ ],
+ "Board_Press": [
+  "ombro",
+  "punho",
+  "gestante"
+ ],
+ "Body-Up": [
+  "ombro",
+  "cotovelo",
+  "punho"
+ ],
+ "Body_Tricep_Press": [
+  "cotovelo",
+  "ombro",
+  "punho"
+ ],
+ "Bodyweight_Flyes": [
+  "ombro",
+  "lombar",
+  "punho"
+ ],
+ "Bodyweight_Mid_Row": [
+  "ombro",
+  "cotovelo"
+ ],
+ "Bodyweight_Squat": [
+  "joelho",
+  "quadril"
+ ],
+ "Bodyweight_Walking_Lunge": [
+  "joelho",
+  "quadril",
+  "tornozelo"
+ ],
+ "Bosu_Ball_Cable_Crunch_With_Side_Bends": [
+  "lombar",
+  "cervical",
+  "joelho"
+ ],
+ "Bottoms-Up_Clean_From_The_Hang_Position": [
+  "punho",
+  "ombro",
+  "lombar"
+ ],
+ "Bottoms_Up": [
+  "lombar",
+  "cervical",
+  "gestante"
+ ],
+ "Box_Jump_Multiple_Response": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Box_Skip": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Box_Squat": [
+  "joelho",
+  "lombar",
+  "hipertensao"
+ ],
+ "Box_Squat_with_Bands": [
+  "joelho",
+  "lombar",
+  "hipertensao"
+ ],
+ "Box_Squat_with_Chains": [
+  "joelho",
+  "lombar",
+  "hipertensao"
+ ],
+ "Brachialis-SMR": [],
+ "Bradford_Rocky_Presses": [
+  "ombro",
+  "cervical",
+  "hipertensao"
+ ],
+ "Butt-Ups": [
+  "ombro",
+  "punho",
+  "lombar"
+ ],
+ "Butt_Lift_Bridge": [
+  "lombar",
+  "gestante"
+ ],
+ "Butterfly": [
+  "ombro"
+ ],
+ "Cable_Chest_Press": [
+  "ombro"
+ ],
+ "Cable_Crossover": [
+  "ombro"
+ ],
+ "Cable_Crunch": [
+  "lombar",
+  "cervical",
+  "joelho"
+ ],
+ "Cable_Deadlifts": [
+  "lombar",
+  "joelho"
+ ],
+ "Cable_Hammer_Curls_-_Rope_Attachment": [
+  "cotovelo",
+  "punho"
+ ],
+ "Cable_Hip_Adduction": [
+  "quadril"
+ ],
+ "Cable_Incline_Pushdown": [
+  "ombro"
+ ],
+ "Cable_Incline_Triceps_Extension": [
+  "cotovelo",
+  "ombro"
+ ],
+ "Cable_Internal_Rotation": [
+  "ombro"
+ ],
+ "Cable_Iron_Cross": [
+  "ombro"
+ ],
+ "Cable_Judo_Flip": [
+  "lombar",
+  "ombro"
+ ],
+ "Cable_Lying_Triceps_Extension": [
+  "cotovelo",
+  "gestante"
+ ],
+ "Cable_One_Arm_Tricep_Extension": [
+  "cotovelo"
+ ],
+ "Cable_Preacher_Curl": [
+  "cotovelo",
+  "punho"
+ ],
+ "Cable_Rear_Delt_Fly": [
+  "ombro"
+ ],
+ "Cable_Reverse_Crunch": [
+  "lombar",
+  "gestante"
+ ],
+ "Cable_Rope_Overhead_Triceps_Extension": [
+  "ombro",
+  "cotovelo"
+ ],
+ "Cable_Rope_Rear-Delt_Rows": [
+  "ombro"
+ ],
+ "Cable_Russian_Twists": [
+  "lombar",
+  "gestante"
+ ],
+ "Cable_Seated_Crunch": [
+  "lombar",
+  "cervical",
+  "gestante"
+ ],
+ "Cable_Seated_Lateral_Raise": [
+  "ombro"
+ ],
+ "Cable_Shoulder_Press": [
+  "ombro",
+  "lombar",
+  "hipertensao"
+ ],
+ "Cable_Shrugs": [
+  "cervical",
+  "ombro"
+ ],
+ "Cable_Wrist_Curl": [
+  "punho",
+  "cotovelo"
+ ],
+ "Calf-Machine_Shoulder_Shrug": [
+  "cervical",
+  "ombro"
+ ],
+ "Calf_Press": [
+  "tornozelo"
+ ],
+ "Calf_Press_On_The_Leg_Press_Machine": [
+  "tornozelo",
+  "joelho"
+ ],
+ "Calf_Raise_On_A_Dumbbell": [
+  "tornozelo"
+ ],
+ "Calf_Raises_-_With_Bands": [
+  "tornozelo"
+ ],
+ "Calf_Stretch_Elbows_Against_Wall": [],
+ "Calf_Stretch_Hands_Against_Wall": [],
+ "Calves-SMR": [],
+ "Car_Deadlift": [
+  "lombar",
+  "joelho",
+  "hipertensao"
+ ],
+ "Car_Drivers": [
+  "ombro",
+  "punho"
+ ],
+ "Carioca_Quick_Step": [
+  "tornozelo",
+  "joelho",
+  "gestante"
+ ],
+ "Cat_Stretch": [],
+ "Catch_and_Overhead_Throw": [
+  "ombro",
+  "lombar",
+  "gestante"
+ ],
+ "Chain_Handle_Extension": [
+  "cotovelo"
+ ],
+ "Chain_Press": [
+  "ombro",
+  "cotovelo",
+  "hipertensao"
+ ],
+ "Chair_Leg_Extended_Stretch": [],
+ "Chair_Lower_Back_Stretch": [],
+ "Concentration_Curls": [
+  "cotovelo"
+ ],
+ "Cross-Body_Crunch": [
+  "cervical",
+  "lombar",
+  "gestante"
+ ],
+ "Cross_Body_Hammer_Curl": [
+  "cotovelo"
+ ],
+ "Cross_Over_-_With_Bands": [
+  "ombro"
+ ],
+ "Crossover_Reverse_Lunge": [
+  "joelho"
+ ],
+ "Crucifix": [
+  "ombro",
+  "cotovelo",
+  "hipertensao"
+ ],
+ "Crunch_-_Hands_Overhead": [
+  "cervical",
+  "lombar",
+  "gestante"
+ ],
+ "Crunch_-_Legs_On_Exercise_Ball": [
+  "cervical",
+  "lombar",
+  "gestante"
+ ],
+ "Crunches": [
+  "cervical",
+  "lombar",
+  "gestante"
+ ],
+ "Cuban_Press": [
+  "ombro"
+ ],
+ "Dancers_Stretch": [],
+ "Dead_Bug": [
+  "lombar",
+  "gestante"
+ ],
+ "Deadlift_with_Bands": [
+  "lombar",
+  "quadril",
+  "hipertensao"
+ ],
+ "Deadlift_with_Chains": [
+  "lombar",
+  "quadril",
+  "hipertensao"
+ ],
+ "Decline_Barbell_Bench_Press": [
+  "ombro",
+  "gestante",
+  "hipertensao"
+ ],
+ "Decline_Close-Grip_Bench_To_Skull_Crusher": [
+  "cotovelo",
+  "ombro",
+  "gestante"
+ ],
+ "Decline_Crunch": [
+  "cervical",
+  "lombar",
+  "gestante"
+ ],
+ "Decline_Dumbbell_Bench_Press": [
+  "ombro",
+  "gestante"
+ ],
+ "Decline_Dumbbell_Flyes": [
+  "ombro",
+  "gestante"
+ ],
+ "Decline_Dumbbell_Triceps_Extension": [
+  "cotovelo",
+  "ombro",
+  "gestante"
+ ],
+ "Decline_EZ_Bar_Triceps_Extension": [
+  "cotovelo",
+  "punho",
+  "gestante"
+ ],
+ "Decline_Oblique_Crunch": [
+  "cervical",
+  "lombar",
+  "gestante"
+ ],
+ "Decline_Push-Up": [
+  "ombro",
+  "punho"
+ ],
+ "Decline_Reverse_Crunch": [
+  "lombar",
+  "cervical",
+  "gestante"
+ ],
+ "Decline_Smith_Press": [
+  "ombro",
+  "gestante"
+ ],
+ "Deficit_Deadlift": [
+  "lombar",
+  "quadril",
+  "hipertensao"
+ ],
+ "Depth_Jump_Leap": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Dip_Machine": [
+  "ombro",
+  "cotovelo"
+ ],
+ "Dips_-_Chest_Version": [
+  "ombro",
+  "punho",
+  "cotovelo"
+ ],
+ "Dips_-_Triceps_Version": [
+  "ombro",
+  "cotovelo",
+  "punho"
+ ],
+ "Chair_Squat": [
+  "joelho",
+  "quadril"
+ ],
+ "Chair_Upper_Body_Stretch": [],
+ "Chest_And_Front_Of_Shoulder_Stretch": [
+  "ombro"
+ ],
+ "Chest_Push_from_3_point_stance": [
+  "ombro",
+  "punho"
+ ],
+ "Chest_Push_multiple_response": [
+  "ombro",
+  "punho"
+ ],
+ "Chest_Push_single_response": [
+  "ombro"
+ ],
+ "Chest_Push_with_Run_Release": [
+  "ombro",
+  "gestante"
+ ],
+ "Chest_Stretch_on_Stability_Ball": [
+  "ombro"
+ ],
+ "Childs_Pose": [
+  "joelho"
+ ],
+ "Chin-Up": [
+  "ombro",
+  "cotovelo"
+ ],
+ "Chin_To_Chest_Stretch": [
+  "cervical"
+ ],
+ "Circus_Bell": [
+  "ombro",
+  "lombar",
+  "punho"
+ ],
+ "Clean": [
+  "lombar",
+  "joelho",
+  "punho"
+ ],
+ "Clean_Deadlift": [
+  "lombar",
+  "hipertensao",
+  "joelho"
+ ],
+ "Clean_Pull": [
+  "lombar",
+  "joelho",
+  "ombro"
+ ],
+ "Clean_Shrug": [
+  "cervical",
+  "lombar",
+  "ombro"
+ ],
+ "Clean_and_Jerk": [
+  "ombro",
+  "lombar",
+  "punho"
+ ],
+ "Clean_and_Press": [
+  "ombro",
+  "lombar",
+  "hipertensao"
+ ],
+ "Clean_from_Blocks": [
+  "lombar",
+  "joelho",
+  "punho"
+ ],
+ "Clock_Push-Up": [
+  "punho",
+  "ombro"
+ ],
+ "Close-Grip_Barbell_Bench_Press": [
+  "ombro",
+  "punho",
+  "cotovelo"
+ ],
+ "Close-Grip_Dumbbell_Press": [
+  "ombro",
+  "cotovelo"
+ ],
+ "Close-Grip_EZ-Bar_Curl_with_Band": [
+  "cotovelo",
+  "punho"
+ ],
+ "Close-Grip_EZ-Bar_Press": [
+  "cotovelo",
+  "ombro",
+  "punho"
+ ],
+ "Close-Grip_EZ_Bar_Curl": [
+  "cotovelo",
+  "punho"
+ ],
+ "Close-Grip_Front_Lat_Pulldown": [
+  "ombro",
+  "cotovelo"
+ ],
+ "Close-Grip_Push-Up_off_of_a_Dumbbell": [
+  "punho",
+  "ombro",
+  "cotovelo"
+ ],
+ "Close-Grip_Standing_Barbell_Curl": [
+  "cotovelo",
+  "punho",
+  "lombar"
+ ],
+ "Cocoons": [
+  "lombar",
+  "cervical",
+  "gestante"
+ ],
+ "Conans_Wheel": [
+  "lombar",
+  "hipertensao",
+  "joelho"
+ ],
+ "Donkey_Calf_Raises": [
+  "tornozelo",
+  "lombar"
+ ],
+ "Double_Kettlebell_Alternating_Hang_Clean": [
+  "lombar",
+  "punho",
+  "ombro"
+ ],
+ "Double_Kettlebell_Jerk": [
+  "ombro",
+  "lombar",
+  "hipertensao"
+ ],
+ "Double_Kettlebell_Push_Press": [
+  "ombro",
+  "lombar",
+  "hipertensao"
+ ],
+ "Double_Kettlebell_Snatch": [
+  "ombro",
+  "punho",
+  "lombar"
+ ],
+ "Double_Kettlebell_Windmill": [
+  "lombar",
+  "ombro",
+  "quadril"
+ ],
+ "Double_Leg_Butt_Kick": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Downward_Facing_Balance": [
+  "lombar"
+ ],
+ "Drag_Curl": [
+  "cotovelo",
+  "punho"
+ ],
+ "Drop_Push": [
+  "ombro",
+  "punho",
+  "gestante"
+ ],
+ "Dumbbell_Alternate_Bicep_Curl": [
+  "cotovelo"
+ ],
+ "Dumbbell_Bench_Press": [
+  "ombro",
+  "gestante"
+ ],
+ "Dumbbell_Bench_Press_with_Neutral_Grip": [
+  "ombro",
+  "gestante"
+ ],
+ "Dumbbell_Bicep_Curl": [
+  "cotovelo"
+ ],
+ "Dumbbell_Clean": [
+  "lombar",
+  "ombro",
+  "punho"
+ ],
+ "Dumbbell_Floor_Press": [
+  "ombro",
+  "gestante"
+ ],
+ "Dumbbell_Flyes": [
+  "ombro",
+  "gestante"
+ ],
+ "Dumbbell_Incline_Row": [
+  "ombro",
+  "lombar"
+ ],
+ "Dumbbell_Incline_Shoulder_Raise": [
+  "ombro"
+ ],
+ "Dumbbell_Lunges": [
+  "joelho",
+  "quadril"
+ ],
+ "Dumbbell_Lying_One-Arm_Rear_Lateral_Raise": [
+  "ombro"
+ ],
+ "Dumbbell_Lying_Pronation": [
+  "punho",
+  "cotovelo"
+ ],
+ "Dumbbell_Lying_Rear_Lateral_Raise": [
+  "ombro",
+  "gestante"
+ ],
+ "Dumbbell_Lying_Supination": [
+  "punho",
+  "cotovelo"
+ ],
+ "Dumbbell_One-Arm_Shoulder_Press": [
+  "ombro",
+  "cervical",
+  "hipertensao"
+ ],
+ "Dumbbell_One-Arm_Triceps_Extension": [
+  "ombro",
+  "cotovelo"
+ ],
+ "Dumbbell_One-Arm_Upright_Row": [
+  "ombro",
+  "punho"
+ ],
+ "Dumbbell_Prone_Incline_Curl": [
+  "cotovelo",
+  "ombro"
+ ],
+ "Dumbbell_Raise": [
+  "ombro"
+ ],
+ "Dumbbell_Rear_Lunge": [
+  "joelho",
+  "quadril",
+  "tornozelo"
+ ],
+ "Dumbbell_Scaption": [
+  "ombro"
+ ],
+ "Dumbbell_Seated_Box_Jump": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Dumbbell_Seated_One-Leg_Calf_Raise": [
+  "tornozelo"
+ ],
+ "Dumbbell_Shoulder_Press": [
+  "ombro",
+  "hipertensao"
+ ],
+ "Dumbbell_Shrug": [
+  "cervical",
+  "ombro"
+ ],
+ "Dumbbell_Side_Bend": [
+  "lombar",
+  "gestante"
+ ],
+ "Dumbbell_Squat": [
+  "joelho",
+  "lombar"
+ ],
+ "Dumbbell_Squat_To_A_Bench": [
+  "joelho",
+  "lombar"
+ ],
+ "Dumbbell_Step_Ups": [
+  "joelho",
+  "quadril"
+ ],
+ "Dumbbell_Tricep_Extension_-Pronated_Grip": [
+  "cotovelo",
+  "ombro",
+  "punho"
+ ],
+ "Dynamic_Back_Stretch": [],
+ "Dynamic_Chest_Stretch": [],
+ "EZ-Bar_Curl": [
+  "cotovelo",
+  "punho"
+ ],
+ "EZ-Bar_Skullcrusher": [
+  "cotovelo",
+  "ombro"
+ ],
+ "Elbow_Circles": [],
+ "Elbow_to_Knee": [
+  "cervical",
+  "lombar",
+  "gestante"
+ ],
+ "Elbows_Back": [],
+ "Elevated_Back_Lunge": [
+  "joelho",
+  "quadril",
+  "lombar"
+ ],
+ "Elevated_Cable_Rows": [
+  "lombar",
+  "ombro"
+ ],
+ "Elliptical_Trainer": [],
+ "Exercise_Ball_Crunch": [
+  "lombar",
+  "cervical",
+  "gestante"
+ ],
+ "Exercise_Ball_Pull-In": [
+  "ombro",
+  "punho",
+  "lombar"
+ ],
+ "Extended_Range_One-Arm_Kettlebell_Floor_Press": [
+  "ombro",
+  "gestante"
+ ],
+ "External_Rotation": [
+  "ombro"
+ ],
+ "External_Rotation_with_Band": [
+  "ombro"
+ ],
+ "External_Rotation_with_Cable": [
+  "ombro"
+ ],
+ "Face_Pull": [
+  "ombro"
+ ],
+ "Farmers_Walk": [
+  "lombar",
+  "punho",
+  "hipertensao"
+ ],
+ "Fast_Skipping": [
+  "tornozelo",
+  "joelho",
+  "gestante"
+ ],
+ "Finger_Curls": [
+  "punho"
+ ],
+ "Flat_Bench_Cable_Flyes": [
+  "ombro",
+  "gestante"
+ ],
+ "Flat_Bench_Leg_Pull-In": [
+  "lombar",
+  "gestante"
+ ],
+ "Flat_Bench_Lying_Leg_Raise": [
+  "lombar",
+  "gestante"
+ ],
+ "Flexor_Incline_Dumbbell_Curls": [
+  "cotovelo"
+ ],
+ "Floor_Glute-Ham_Raise": [
+  "joelho",
+  "lombar"
+ ],
+ "Floor_Press": [
+  "ombro",
+  "gestante"
+ ],
+ "Floor_Press_with_Chains": [
+  "ombro",
+  "gestante",
+  "hipertensao"
+ ],
+ "Flutter_Kicks": [
+  "lombar",
+  "gestante"
+ ],
+ "Foot-SMR": [],
+ "Forward_Drag_with_Press": [
+  "ombro",
+  "lombar",
+  "hipertensao"
+ ],
+ "Frankenstein_Squat": [
+  "joelho",
+  "lombar",
+  "ombro"
+ ],
+ "Freehand_Jump_Squat": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Frog_Hops": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Frog_Sit-Ups": [
+  "lombar",
+  "cervical",
+  "gestante"
+ ],
+ "Front_Barbell_Squat": [
+  "joelho",
+  "lombar",
+  "punho"
+ ],
+ "Front_Barbell_Squat_To_A_Bench": [
+  "joelho",
+  "lombar"
+ ],
+ "Front_Box_Jump": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Front_Cable_Raise": [
+  "ombro"
+ ],
+ "Front_Cone_Hops_or_hurdle_hops": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Front_Dumbbell_Raise": [
+  "ombro"
+ ],
+ "Front_Incline_Dumbbell_Raise": [
+  "ombro"
+ ],
+ "Front_Leg_Raises": [],
+ "Front_Plate_Raise": [
+  "ombro"
+ ],
+ "Front_Raise_And_Pullover": [
+  "ombro",
+  "lombar",
+  "gestante"
+ ],
+ "Front_Squat_Clean_Grip": [
+  "joelho",
+  "lombar",
+  "punho"
+ ],
+ "Front_Squats_With_Two_Kettlebells": [
+  "joelho",
+  "lombar",
+  "punho"
+ ],
+ "Front_Two-Dumbbell_Raise": [
+  "ombro"
+ ],
+ "Full_Range-Of-Motion_Lat_Pulldown": [
+  "ombro"
+ ],
+ "Gironda_Sternum_Chins": [
+  "ombro",
+  "cervical",
+  "cotovelo"
+ ],
+ "Glute_Ham_Raise": [
+  "lombar",
+  "joelho"
+ ],
+ "Glute_Kickback": [
+  "lombar"
+ ],
+ "Goblet_Squat": [
+  "joelho",
+  "quadril"
+ ],
+ "Good_Morning": [
+  "lombar",
+  "quadril",
+  "hipertensao"
+ ],
+ "Good_Morning_off_Pins": [
+  "lombar",
+  "quadril",
+  "hipertensao"
+ ],
+ "Gorilla_Chin_Crunch": [
+  "ombro",
+  "cotovelo",
+  "gestante"
+ ],
+ "Groin_and_Back_Stretch": [],
+ "Groiners": [
+  "quadril"
+ ],
+ "Hack_Squat": [
+  "joelho",
+  "lombar"
+ ],
+ "Hammer_Curls": [
+  "cotovelo"
+ ],
+ "Hammer_Grip_Incline_DB_Bench_Press": [
+  "ombro"
+ ],
+ "Hamstring-SMR": [],
+ "Hamstring_Stretch": [],
+ "Handstand_Push-Ups": [
+  "ombro",
+  "punho",
+  "cervical"
+ ],
+ "Hang_Clean": [
+  "lombar",
+  "ombro",
+  "punho"
+ ],
+ "Hang_Clean_-_Below_the_Knees": [
+  "lombar",
+  "joelho",
+  "punho"
+ ],
+ "Hang_Snatch": [
+  "ombro",
+  "lombar",
+  "punho"
+ ],
+ "Hang_Snatch_-_Below_Knees": [
+  "ombro",
+  "lombar",
+  "punho"
+ ],
+ "Hanging_Bar_Good_Morning": [
+  "lombar",
+  "quadril",
+  "hipertensao"
+ ],
+ "Hanging_Leg_Raise": [
+  "ombro",
+  "lombar",
+  "gestante"
+ ],
+ "Hanging_Pike": [
+  "ombro",
+  "lombar",
+  "gestante"
+ ],
+ "Heaving_Snatch_Balance": [
+  "ombro",
+  "joelho",
+  "punho"
+ ],
+ "Heavy_Bag_Thrust": [
+  "ombro",
+  "punho"
+ ],
+ "High_Cable_Curls": [
+  "ombro",
+  "cotovelo"
+ ],
+ "Hip_Circles_prone": [
+  "quadril",
+  "lombar"
+ ],
+ "Hip_Extension_with_Bands": [
+  "lombar",
+  "quadril"
+ ],
+ "Hip_Flexion_with_Band": [
+  "quadril",
+  "lombar"
+ ],
+ "Hip_Lift_with_Band": [
+  "lombar",
+  "quadril"
+ ],
+ "Hug_A_Ball": [],
+ "Hug_Knees_To_Chest": [],
+ "Hurdle_Hops": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Hyperextensions_Back_Extensions": [
+  "lombar",
+  "gestante",
+  "hipertensao"
+ ],
+ "Hyperextensions_With_No_Hyperextension_Bench": [
+  "lombar",
+  "gestante"
+ ],
+ "IT_Band_and_Glute_Stretch": [],
+ "Iliotibial_Tract-SMR": [],
+ "Inchworm": [
+  "lombar",
+  "punho",
+  "gestante"
+ ],
+ "Incline_Barbell_Triceps_Extension": [
+  "cotovelo",
+  "ombro"
+ ],
+ "Incline_Bench_Pull": [
+  "ombro",
+  "gestante"
+ ],
+ "Incline_Cable_Chest_Press": [
+  "ombro"
+ ],
+ "Incline_Cable_Flye": [
+  "ombro"
+ ],
+ "Incline_Dumbbell_Bench_With_Palms_Facing_In": [
+  "ombro"
+ ],
+ "Incline_Dumbbell_Curl": [
+  "cotovelo",
+  "ombro"
+ ],
+ "Incline_Dumbbell_Flyes": [
+  "ombro"
+ ],
+ "Incline_Dumbbell_Flyes_-_With_A_Twist": [
+  "ombro",
+  "punho"
+ ],
+ "Incline_Dumbbell_Press": [
+  "ombro"
+ ],
+ "Incline_Hammer_Curls": [
+  "cotovelo"
+ ],
+ "Incline_Inner_Biceps_Curl": [
+  "cotovelo",
+  "ombro"
+ ],
+ "Incline_Push-Up": [
+  "punho",
+  "ombro"
+ ],
+ "Incline_Push-Up_Close-Grip": [
+  "punho",
+  "cotovelo"
+ ],
+ "Incline_Push-Up_Depth_Jump": [
+  "punho",
+  "ombro",
+  "gestante"
+ ],
+ "Incline_Push-Up_Medium": [
+  "punho",
+  "ombro"
+ ],
+ "Incline_Push-Up_Reverse_Grip": [
+  "punho",
+  "cotovelo",
+  "ombro"
+ ],
+ "Incline_Push-Up_Wide": [
+  "punho",
+  "ombro"
+ ],
+ "Intermediate_Groin_Stretch": [],
+ "Intermediate_Hip_Flexor_and_Quad_Stretch": [
+  "joelho"
+ ],
+ "Internal_Rotation_with_Band": [
+  "ombro"
+ ],
+ "Inverted_Row": [
+  "ombro",
+  "cotovelo"
+ ],
+ "Inverted_Row_with_Straps": [
+  "ombro",
+  "punho"
+ ],
+ "Iron_Cross": [
+  "ombro"
+ ],
+ "Iron_Crosses_stretch": [
+  "lombar"
+ ],
+ "Isometric_Chest_Squeezes": [
+  "hipertensao",
+  "ombro"
+ ],
+ "Isometric_Neck_Exercise_-_Front_And_Back": [
+  "cervical",
+  "hipertensao"
+ ],
+ "Isometric_Neck_Exercise_-_Sides": [
+  "cervical",
+  "hipertensao"
+ ],
+ "Isometric_Wipers": [
+  "ombro",
+  "punho",
+  "lombar"
+ ],
+ "JM_Press": [
+  "cotovelo",
+  "ombro",
+  "punho"
+ ],
+ "Jackknife_Sit-Up": [
+  "lombar",
+  "cervical",
+  "gestante"
+ ],
+ "Janda_Sit-Up": [
+  "lombar",
+  "cervical",
+  "gestante"
+ ],
+ "Jefferson_Squats": [
+  "lombar",
+  "joelho",
+  "quadril"
+ ],
+ "Jerk_Balance": [
+  "ombro",
+  "joelho"
+ ],
+ "Jerk_Dip_Squat": [
+  "joelho",
+  "ombro",
+  "lombar"
+ ],
+ "Jogging_Treadmill": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Keg_Load": [
+  "lombar",
+  "ombro",
+  "hipertensao"
+ ],
+ "Kettlebell_Arnold_Press": [
+  "ombro",
+  "punho"
+ ],
+ "Kettlebell_Dead_Clean": [
+  "lombar",
+  "punho",
+  "ombro"
+ ],
+ "Kettlebell_Figure_8": [
+  "lombar",
+  "gestante"
+ ],
+ "Kettlebell_Halo": [
+  "ombro",
+  "cervical"
+ ],
+ "Kettlebell_Halo_With_Overhead_Extension": [
+  "ombro",
+  "cotovelo"
+ ],
+ "Kettlebell_Hang_Clean": [
+  "lombar",
+  "punho",
+  "ombro"
+ ],
+ "Kettlebell_One-Legged_Deadlift": [
+  "lombar",
+  "quadril",
+  "tornozelo"
+ ],
+ "Kettlebell_Overhead_Triceps_Extension": [
+  "ombro",
+  "cotovelo"
+ ],
+ "Kettlebell_Pass_Between_The_Legs": [
+  "lombar",
+  "gestante"
+ ],
+ "Kettlebell_Pirate_Ships": [
+  "ombro",
+  "lombar"
+ ],
+ "Kettlebell_Pistol_Squat": [
+  "joelho",
+  "quadril",
+  "tornozelo"
+ ],
+ "Kettlebell_Seated_Press": [
+  "ombro",
+  "lombar"
+ ],
+ "Kettlebell_Seesaw_Press": [
+  "ombro",
+  "lombar"
+ ],
+ "Kettlebell_Sumo_High_Pull": [
+  "ombro",
+  "lombar"
+ ],
+ "Kettlebell_Thruster": [
+  "ombro",
+  "joelho",
+  "lombar"
+ ],
+ "Kettlebell_Turkish_Get-Up_Lunge_style": [
+  "ombro",
+  "joelho",
+  "punho"
+ ],
+ "Kettlebell_Turkish_Get-Up_Squat_style": [
+  "ombro",
+  "joelho",
+  "punho"
+ ],
+ "Kettlebell_Windmill": [
+  "lombar",
+  "ombro",
+  "quadril"
+ ],
+ "Kipping_Muscle_Up": [
+  "ombro",
+  "cotovelo",
+  "punho"
+ ],
+ "Knee_Across_The_Body": [],
+ "Knee_Circles": [
+  "joelho"
+ ],
+ "Knee_Hip_Raise_On_Parallel_Bars": [
+  "ombro",
+  "lombar"
+ ],
+ "Knee_Tuck_Jump": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Kneeling_Arm_Drill": [],
+ "Kneeling_Cable_Crunch_With_Alternating_Oblique_Twists": [
+  "lombar",
+  "cervical"
+ ],
+ "Kneeling_Cable_Triceps_Extension": [
+  "cotovelo",
+  "ombro"
+ ],
+ "Kneeling_Forearm_Stretch": [
+  "punho"
+ ],
+ "Kneeling_High_Pulley_Row": [
+  "ombro",
+  "lombar"
+ ],
+ "Kneeling_Hip_Flexor": [
+  "quadril",
+  "joelho"
+ ],
+ "Kneeling_Jump_Squat": [
+  "joelho",
+  "lombar",
+  "hipertensao"
+ ],
+ "Kneeling_Single-Arm_High_Pulley_Row": [
+  "ombro",
+  "lombar"
+ ],
+ "Kneeling_Squat": [
+  "joelho",
+  "lombar",
+  "hipertensao"
+ ],
+ "Landmine_180s": [
+  "lombar",
+  "ombro"
+ ],
+ "Landmine_Linear_Jammer": [
+  "ombro",
+  "lombar"
+ ],
+ "Lateral_Bound": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Lateral_Box_Jump": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Lateral_Cone_Hops": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Lateral_Raise_-_With_Bands": [
+  "ombro"
+ ],
+ "Latissimus_Dorsi-SMR": [],
+ "Leg-Over_Floor_Press": [
+  "ombro",
+  "lombar",
+  "gestante"
+ ],
+ "Leg-Up_Hamstring_Stretch": [],
+ "Leg_Extensions": [
+  "joelho"
+ ],
+ "Leg_Lift": [
+  "lombar"
+ ],
+ "Leg_Press": [
+  "joelho",
+  "lombar",
+  "hipertensao"
+ ],
+ "Leg_Pull-In": [
+  "lombar",
+  "gestante"
+ ],
+ "Leverage_Chest_Press": [
+  "ombro"
+ ],
+ "Leverage_Deadlift": [
+  "lombar",
+  "joelho",
+  "hipertensao"
+ ],
+ "Leverage_Decline_Chest_Press": [
+  "ombro",
+  "hipertensao"
+ ],
+ "Leverage_High_Row": [
+  "ombro"
+ ],
+ "Lying_Leg_Curls": [
+  "joelho"
+ ],
+ "Lying_Machine_Squat": [
+  "joelho",
+  "lombar",
+  "quadril"
+ ],
+ "Lying_One-Arm_Lateral_Raise": [
+  "ombro"
+ ],
+ "Lying_Prone_Quadriceps": [
+  "gestante"
+ ],
+ "Lying_Rear_Delt_Raise": [
+  "ombro"
+ ],
+ "Lying_Supine_Dumbbell_Curl": [
+  "ombro",
+  "cotovelo",
+  "gestante"
+ ],
+ "Lying_T-Bar_Row": [
+  "ombro",
+  "lombar"
+ ],
+ "Lying_Triceps_Press": [
+  "cotovelo",
+  "punho",
+  "gestante"
+ ],
+ "Machine_Bench_Press": [
+  "ombro",
+  "punho"
+ ],
+ "Machine_Bicep_Curl": [
+  "cotovelo",
+  "punho"
+ ],
+ "Machine_Preacher_Curls": [
+  "cotovelo",
+  "punho"
+ ],
+ "Machine_Shoulder_Military_Press": [
+  "ombro",
+  "cervical",
+  "hipertensao"
+ ],
+ "Machine_Triceps_Extension": [
+  "cotovelo"
+ ],
+ "Medicine_Ball_Chest_Pass": [
+  "ombro",
+  "punho"
+ ],
+ "Medicine_Ball_Full_Twist": [
+  "lombar",
+  "gestante"
+ ],
+ "Medicine_Ball_Scoop_Throw": [
+  "ombro",
+  "lombar"
+ ],
+ "Middle_Back_Shrug": [
+  "cervical",
+  "ombro"
+ ],
+ "Middle_Back_Stretch": [],
+ "Mixed_Grip_Chin": [
+  "ombro",
+  "cotovelo",
+  "punho"
+ ],
+ "Monster_Walk": [
+  "quadril",
+  "joelho"
+ ],
+ "Mountain_Climbers": [
+  "punho",
+  "lombar",
+  "gestante"
+ ],
+ "Moving_Claw_Series": [
+  "quadril",
+  "tornozelo",
+  "gestante"
+ ],
+ "Muscle_Snatch": [
+  "ombro",
+  "lombar",
+  "punho"
+ ],
+ "Muscle_Up": [
+  "ombro",
+  "cotovelo",
+  "punho"
+ ],
+ "Narrow_Stance_Hack_Squats": [
+  "joelho",
+  "lombar"
+ ],
+ "Narrow_Stance_Leg_Press": [
+  "joelho",
+  "lombar",
+  "hipertensao"
+ ],
+ "Narrow_Stance_Squats": [
+  "joelho",
+  "lombar",
+  "hipertensao"
+ ],
+ "Natural_Glute_Ham_Raise": [
+  "joelho",
+  "lombar"
+ ],
+ "Neck-SMR": [
+  "cervical"
+ ],
+ "Neck_Press": [
+  "ombro",
+  "cervical",
+  "gestante"
+ ],
+ "Leverage_Incline_Chest_Press": [
+  "ombro"
+ ],
+ "Leverage_Iso_Row": [
+  "ombro"
+ ],
+ "Leverage_Shoulder_Press": [
+  "ombro",
+  "hipertensao"
+ ],
+ "Leverage_Shrug": [
+  "cervical",
+  "ombro"
+ ],
+ "Linear_3-Part_Start_Technique": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Linear_Acceleration_Wall_Drill": [
+  "tornozelo",
+  "gestante"
+ ],
+ "Linear_Depth_Jump": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Log_Lift": [
+  "ombro",
+  "lombar",
+  "hipertensao"
+ ],
+ "London_Bridges": [
+  "ombro",
+  "cotovelo"
+ ],
+ "Looking_At_Ceiling": [],
+ "Low_Cable_Crossover": [
+  "ombro"
+ ],
+ "Low_Cable_Triceps_Extension": [
+  "cotovelo"
+ ],
+ "Low_Pulley_Row_To_Neck": [
+  "ombro",
+  "cervical"
+ ],
+ "Lower_Back-SMR": [],
+ "Lower_Back_Curl": [],
+ "Lunge_Pass_Through": [
+  "joelho",
+  "quadril"
+ ],
+ "Lunge_Sprint": [
+  "joelho",
+  "quadril",
+  "gestante"
+ ],
+ "Lying_Bent_Leg_Groin": [
+  "gestante"
+ ],
+ "Lying_Cable_Curl": [
+  "cotovelo",
+  "gestante"
+ ],
+ "Lying_Cambered_Barbell_Row": [
+  "ombro",
+  "gestante"
+ ],
+ "Lying_Close-Grip_Bar_Curl_On_High_Pulley": [
+  "cotovelo",
+  "gestante"
+ ],
+ "Lying_Close-Grip_Barbell_Triceps_Extension_Behind_The_Head": [
+  "cotovelo",
+  "ombro",
+  "gestante"
+ ],
+ "Lying_Close-Grip_Barbell_Triceps_Press_To_Chin": [
+  "cotovelo",
+  "punho",
+  "gestante"
+ ],
+ "Lying_Crossover": [
+  "lombar"
+ ],
+ "Lying_Dumbbell_Tricep_Extension": [
+  "cotovelo",
+  "gestante"
+ ],
+ "Lying_Face_Down_Plate_Neck_Resistance": [
+  "cervical",
+  "gestante"
+ ],
+ "Lying_Face_Up_Plate_Neck_Resistance": [
+  "cervical",
+  "gestante"
+ ],
+ "Lying_Glute": [],
+ "Lying_Hamstring": [],
+ "Lying_High_Bench_Barbell_Curl": [
+  "cotovelo",
+  "gestante"
+ ],
+ "Oblique_Crunches": [
+  "cervical",
+  "lombar",
+  "gestante"
+ ],
+ "Oblique_Crunches_-_On_The_Floor": [
+  "cervical",
+  "lombar",
+  "gestante"
+ ],
+ "Olympic_Squat": [
+  "joelho",
+  "lombar",
+  "quadril"
+ ],
+ "On-Your-Back_Quad_Stretch": [
+  "joelho",
+  "gestante"
+ ],
+ "On_Your_Side_Quad_Stretch": [
+  "joelho"
+ ],
+ "One-Arm_Dumbbell_Row": [
+  "lombar",
+  "ombro"
+ ],
+ "One-Arm_Flat_Bench_Dumbbell_Flye": [
+  "ombro",
+  "gestante"
+ ],
+ "One-Arm_High-Pulley_Cable_Side_Bends": [
+  "lombar",
+  "ombro"
+ ],
+ "One-Arm_Incline_Lateral_Raise": [
+  "ombro"
+ ],
+ "One-Arm_Kettlebell_Clean": [
+  "lombar",
+  "punho",
+  "ombro"
+ ],
+ "One-Arm_Kettlebell_Clean_and_Jerk": [
+  "ombro",
+  "lombar",
+  "hipertensao"
+ ],
+ "One-Arm_Kettlebell_Floor_Press": [
+  "ombro",
+  "gestante"
+ ],
+ "One-Arm_Kettlebell_Jerk": [
+  "ombro",
+  "lombar",
+  "hipertensao"
+ ],
+ "One-Arm_Kettlebell_Military_Press_To_The_Side": [
+  "ombro",
+  "lombar"
+ ],
+ "One-Arm_Kettlebell_Para_Press": [
+  "ombro",
+  "lombar"
+ ],
+ "One-Arm_Kettlebell_Push_Press": [
+  "ombro",
+  "lombar",
+  "hipertensao"
+ ],
+ "One-Arm_Kettlebell_Row": [
+  "lombar",
+  "ombro"
+ ],
+ "One-Arm_Kettlebell_Snatch": [
+  "ombro",
+  "lombar",
+  "punho"
+ ],
+ "One-Arm_Kettlebell_Split_Jerk": [
+  "ombro",
+  "joelho",
+  "lombar"
+ ],
+ "One-Arm_Kettlebell_Split_Snatch": [
+  "ombro",
+  "joelho",
+  "lombar"
+ ],
+ "One-Arm_Kettlebell_Swings": [
+  "lombar",
+  "ombro",
+  "hipertensao"
+ ],
+ "One-Arm_Long_Bar_Row": [
+  "lombar",
+  "ombro"
+ ],
+ "One-Arm_Medicine_Ball_Slam": [
+  "lombar",
+  "ombro",
+  "gestante"
+ ],
+ "One-Arm_Open_Palm_Kettlebell_Clean": [
+  "lombar",
+  "punho",
+  "ombro"
+ ],
+ "One-Arm_Overhead_Kettlebell_Squats": [
+  "ombro",
+  "joelho",
+  "lombar"
+ ],
+ "One-Arm_Side_Deadlift": [
+  "lombar",
+  "joelho",
+  "hipertensao"
+ ],
+ "One-Arm_Side_Laterals": [
+  "ombro"
+ ],
+ "One-Legged_Cable_Kickback": [
+  "lombar",
+  "quadril"
+ ],
+ "One_Arm_Against_Wall": [],
+ "One_Arm_Chin-Up": [
+  "ombro",
+  "cotovelo",
+  "punho"
+ ],
+ "One_Arm_Dumbbell_Bench_Press": [
+  "ombro",
+  "gestante"
+ ],
+ "One_Arm_Dumbbell_Preacher_Curl": [
+  "cotovelo",
+  "punho"
+ ],
+ "One_Arm_Floor_Press": [
+  "ombro",
+  "gestante"
+ ],
+ "One_Arm_Lat_Pulldown": [
+  "ombro"
+ ],
+ "One_Arm_Pronated_Dumbbell_Triceps_Extension": [
+  "cotovelo",
+  "ombro"
+ ],
+ "One_Arm_Supinated_Dumbbell_Triceps_Extension": [
+  "cotovelo",
+  "ombro"
+ ],
+ "One_Half_Locust": [
+  "lombar",
+  "gestante"
+ ],
+ "One_Handed_Hang": [
+  "ombro",
+  "punho"
+ ],
+ "One_Knee_To_Chest": [],
+ "One_Leg_Barbell_Squat": [
+  "joelho",
+  "lombar",
+  "quadril"
+ ],
+ "Open_Palm_Kettlebell_Clean": [
+  "lombar",
+  "punho",
+  "ombro"
+ ],
+ "Otis-Up": [
+  "lombar",
+  "cervical",
+  "gestante"
+ ],
+ "Overhead_Cable_Curl": [
+  "ombro",
+  "cotovelo"
+ ],
+ "Overhead_Lat": [],
+ "Overhead_Slam": [
+  "ombro",
+  "lombar"
+ ],
+ "Overhead_Squat": [
+  "ombro",
+  "joelho",
+  "lombar"
+ ],
+ "Overhead_Stretch": [],
+ "Overhead_Triceps": [],
+ "Pallof_Press": [],
+ "Pallof_Press_With_Rotation": [
+  "lombar"
+ ],
+ "Palms-Down_Dumbbell_Wrist_Curl_Over_A_Bench": [
+  "punho"
+ ],
+ "Palms-Down_Wrist_Curl_Over_A_Bench": [
+  "punho"
+ ],
+ "Palms-Up_Barbell_Wrist_Curl_Over_A_Bench": [
+  "punho"
+ ],
+ "Palms-Up_Dumbbell_Wrist_Curl_Over_A_Bench": [
+  "punho"
+ ],
+ "Parallel_Bar_Dip": [
+  "ombro",
+  "punho",
+  "cotovelo"
+ ],
+ "Pelvic_Tilt_Into_Bridge": [],
+ "Peroneals-SMR": [],
+ "Peroneals_Stretch": [],
+ "Physioball_Hip_Bridge": [
+  "gestante"
+ ],
+ "Pin_Presses": [
+  "ombro",
+  "hipertensao",
+  "gestante"
+ ],
+ "Piriformis-SMR": [],
+ "Plank": [
+  "lombar",
+  "punho",
+  "ombro"
+ ],
+ "Plate_Pinch": [
+  "punho",
+  "cotovelo",
+  "hipertensao"
+ ],
+ "Plate_Twist": [
+  "lombar",
+  "gestante"
+ ],
+ "Platform_Hamstring_Slides": [
+  "joelho",
+  "lombar"
+ ],
+ "Plie_Dumbbell_Squat": [
+  "joelho",
+  "quadril"
+ ],
+ "Plyo_Kettlebell_Pushups": [
+  "ombro",
+  "punho",
+  "cotovelo"
+ ],
+ "Plyo_Push-up": [
+  "ombro",
+  "punho",
+  "gestante"
+ ],
+ "Posterior_Tibialis_Stretch": [],
+ "Power_Clean": [
+  "lombar",
+  "punho",
+  "hipertensao"
+ ],
+ "Power_Clean_from_Blocks": [
+  "lombar",
+  "punho",
+  "hipertensao"
+ ],
+ "Power_Jerk": [
+  "ombro",
+  "lombar",
+  "hipertensao"
+ ],
+ "Power_Partials": [
+  "ombro"
+ ],
+ "Power_Snatch": [
+  "ombro",
+  "lombar",
+  "punho"
+ ],
+ "Power_Snatch_from_Blocks": [
+  "ombro",
+  "lombar",
+  "punho"
+ ],
+ "Power_Stairs": [
+  "lombar",
+  "joelho",
+  "hipertensao"
+ ],
+ "Preacher_Curl": [
+  "cotovelo",
+  "punho"
+ ],
+ "Preacher_Hammer_Dumbbell_Curl": [
+  "cotovelo"
+ ],
+ "Press_Sit-Up": [
+  "lombar",
+  "cervical",
+  "gestante"
+ ],
+ "Prone_Manual_Hamstring": [
+  "joelho",
+  "gestante"
+ ],
+ "Prowler_Sprint": [
+  "lombar",
+  "joelho",
+  "hipertensao"
+ ],
+ "Pull_Through": [
+  "lombar",
+  "quadril"
+ ],
+ "Pullups": [
+  "ombro",
+  "cotovelo"
+ ],
+ "Push-Up_Wide": [
+  "ombro",
+  "punho"
+ ],
+ "Push-Ups_-_Close_Triceps_Position": [
+  "punho",
+  "cotovelo",
+  "ombro"
+ ],
+ "Push-Ups_With_Feet_Elevated": [
+  "ombro",
+  "punho",
+  "lombar"
+ ],
+ "Push-Ups_With_Feet_On_An_Exercise_Ball": [
+  "ombro",
+  "punho",
+  "lombar"
+ ],
+ "Push_Press": [
+  "ombro",
+  "lombar",
+  "hipertensao"
+ ],
+ "Push_Press_-_Behind_the_Neck": [
+  "ombro",
+  "cervical",
+  "lombar"
+ ],
+ "Push_Up_to_Side_Plank": [
+  "ombro",
+  "punho",
+  "lombar"
+ ],
+ "Rickshaw_Carry": [
+  "lombar",
+  "punho",
+  "hipertensao"
+ ],
+ "Rickshaw_Deadlift": [
+  "lombar",
+  "joelho",
+  "hipertensao"
+ ],
+ "Ring_Dips": [
+  "ombro",
+  "punho",
+  "cotovelo"
+ ],
+ "Rocket_Jump": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Rocking_Standing_Calf_Raise": [
+  "tornozelo",
+  "lombar"
+ ],
+ "Rocky_Pull-Ups_Pulldowns": [
+  "ombro",
+  "cotovelo"
+ ],
+ "Romanian_Deadlift": [
+  "lombar",
+  "quadril",
+  "hipertensao"
+ ],
+ "Romanian_Deadlift_from_Deficit": [
+  "lombar",
+  "quadril",
+  "hipertensao"
+ ],
+ "Rope_Climb": [
+  "ombro",
+  "cotovelo",
+  "punho"
+ ],
+ "Rope_Crunch": [
+  "lombar",
+  "cervical",
+  "gestante"
+ ],
+ "Rope_Jumping": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Rope_Straight-Arm_Pulldown": [
+  "ombro"
+ ],
+ "Round_The_World_Shoulder_Stretch": [],
+ "Rowing_Stationary": [
+  "lombar",
+  "joelho"
+ ],
+ "Runners_Stretch": [],
+ "Running_Treadmill": [
+  "joelho",
+  "tornozelo",
+  "hipertensao"
+ ],
+ "Russian_Twist": [
+  "lombar",
+  "gestante"
+ ],
+ "Sandbag_Load": [
+  "lombar",
+  "joelho",
+  "hipertensao"
+ ],
+ "Scapular_Pull-Up": [
+  "ombro"
+ ],
+ "Scissor_Kick": [
+  "lombar",
+  "gestante"
+ ],
+ "Scissors_Jump": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Seated_Band_Hamstring_Curl": [],
+ "Seated_Barbell_Military_Press": [
+  "ombro",
+  "lombar",
+  "hipertensao"
+ ],
+ "Seated_Barbell_Twist": [
+  "lombar",
+  "cervical",
+  "gestante"
+ ],
+ "Seated_Bent-Over_One-Arm_Dumbbell_Triceps_Extension": [
+  "lombar",
+  "cotovelo"
+ ],
+ "Seated_Bent-Over_Rear_Delt_Raise": [
+  "lombar",
+  "ombro"
+ ],
+ "Seated_Bent-Over_Two-Arm_Dumbbell_Triceps_Extension": [
+  "lombar",
+  "cotovelo"
+ ],
+ "Seated_Biceps": [],
+ "Seated_Cable_Rows": [
+  "lombar",
+  "ombro"
+ ],
+ "Seated_Cable_Shoulder_Press": [
+  "ombro",
+  "hipertensao"
+ ],
+ "Pushups": [
+  "ombro",
+  "punho"
+ ],
+ "Pushups_Close_and_Wide_Hand_Positions": [
+  "ombro",
+  "punho",
+  "cotovelo"
+ ],
+ "Pyramid": [
+  "lombar"
+ ],
+ "Quad_Stretch": [
+  "joelho"
+ ],
+ "Quadriceps-SMR": [],
+ "Quick_Leap": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Rack_Delivery": [
+  "ombro",
+  "lombar",
+  "punho"
+ ],
+ "Rack_Pull_with_Bands": [
+  "lombar",
+  "quadril",
+  "hipertensao"
+ ],
+ "Rack_Pulls": [
+  "lombar",
+  "quadril",
+  "hipertensao"
+ ],
+ "Rear_Leg_Raises": [
+  "lombar",
+  "quadril"
+ ],
+ "Recumbent_Bike": [],
+ "Return_Push_from_Stance": [
+  "ombro",
+  "gestante"
+ ],
+ "Reverse_Band_Bench_Press": [
+  "ombro",
+  "cotovelo",
+  "punho"
+ ],
+ "Reverse_Band_Box_Squat": [
+  "joelho",
+  "lombar",
+  "hipertensao"
+ ],
+ "Reverse_Band_Deadlift": [
+  "lombar",
+  "quadril",
+  "hipertensao"
+ ],
+ "Reverse_Band_Power_Squat": [
+  "joelho",
+  "lombar",
+  "hipertensao"
+ ],
+ "Reverse_Band_Sumo_Deadlift": [
+  "lombar",
+  "quadril",
+  "hipertensao"
+ ],
+ "Reverse_Barbell_Curl": [
+  "punho",
+  "cotovelo"
+ ],
+ "Reverse_Barbell_Preacher_Curls": [
+  "punho",
+  "cotovelo"
+ ],
+ "Reverse_Cable_Curl": [
+  "punho",
+  "cotovelo"
+ ],
+ "Reverse_Crunch": [
+  "lombar",
+  "cervical",
+  "gestante"
+ ],
+ "Reverse_Flyes": [
+  "ombro",
+  "lombar"
+ ],
+ "Reverse_Flyes_With_External_Rotation": [
+  "ombro"
+ ],
+ "Reverse_Grip_Bent-Over_Rows": [
+  "lombar",
+  "ombro"
+ ],
+ "Reverse_Grip_Triceps_Pushdown": [
+  "cotovelo",
+  "punho"
+ ],
+ "Reverse_Hyperextension": [
+  "lombar",
+  "gestante"
+ ],
+ "Reverse_Machine_Flyes": [
+  "ombro"
+ ],
+ "Reverse_Plate_Curls": [
+  "punho",
+  "cotovelo"
+ ],
+ "Reverse_Triceps_Bench_Press": [
+  "cotovelo",
+  "ombro",
+  "punho"
+ ],
+ "Rhomboids-SMR": [],
+ "Seated_Calf_Raise": [
+  "tornozelo",
+  "joelho"
+ ],
+ "Seated_Calf_Stretch": [],
+ "Seated_Close-Grip_Concentration_Barbell_Curl": [
+  "cotovelo",
+  "punho"
+ ],
+ "Seated_Dumbbell_Curl": [
+  "cotovelo"
+ ],
+ "Seated_Dumbbell_Inner_Biceps_Curl": [
+  "cotovelo"
+ ],
+ "Seated_Dumbbell_Palms-Down_Wrist_Curl": [
+  "punho"
+ ],
+ "Seated_Dumbbell_Palms-Up_Wrist_Curl": [
+  "punho"
+ ],
+ "Seated_Dumbbell_Press": [
+  "ombro",
+  "lombar",
+  "hipertensao"
+ ],
+ "Seated_Flat_Bench_Leg_Pull-In": [
+  "lombar",
+  "gestante"
+ ],
+ "Seated_Floor_Hamstring_Stretch": [],
+ "Seated_Front_Deltoid": [],
+ "Seated_Glute": [],
+ "Seated_Good_Mornings": [
+  "lombar",
+  "quadril",
+  "hipertensao"
+ ],
+ "Seated_Hamstring": [],
+ "Seated_Hamstring_and_Calf_Stretch": [],
+ "Seated_Head_Harness_Neck_Resistance": [
+  "cervical",
+  "hipertensao"
+ ],
+ "Seated_Leg_Curl": [
+  "joelho"
+ ],
+ "Seated_Leg_Tucks": [
+  "lombar",
+  "gestante"
+ ],
+ "Seated_One-Arm_Dumbbell_Palms-Down_Wrist_Curl": [
+  "punho"
+ ],
+ "Seated_One-Arm_Dumbbell_Palms-Up_Wrist_Curl": [
+  "punho"
+ ],
+ "Seated_One-arm_Cable_Pulley_Rows": [
+  "lombar",
+  "ombro"
+ ],
+ "Seated_Overhead_Stretch": [],
+ "Seated_Palm-Up_Barbell_Wrist_Curl": [
+  "punho"
+ ],
+ "Seated_Palms-Down_Barbell_Wrist_Curl": [
+  "punho"
+ ],
+ "Seated_Side_Lateral_Raise": [
+  "ombro"
+ ],
+ "Seated_Triceps_Press": [
+  "cotovelo",
+  "ombro"
+ ],
+ "Seated_Two-Arm_Palms-Up_Low-Pulley_Wrist_Curl": [
+  "punho"
+ ],
+ "See-Saw_Press_Alternating_Side_Press": [
+  "ombro",
+  "lombar",
+  "hipertensao"
+ ],
+ "Shotgun_Row": [
+  "ombro",
+  "lombar"
+ ],
+ "Shoulder_Circles": [],
+ "Shoulder_Press_-_With_Bands": [
+  "ombro",
+  "lombar"
+ ],
+ "Shoulder_Raise": [],
+ "Shoulder_Stretch": [],
+ "Side-Lying_Floor_Stretch": [],
+ "Side_Bridge": [
+  "ombro",
+  "lombar"
+ ],
+ "Side_Hop-Sprint": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Side_Jackknife": [
+  "lombar"
+ ],
+ "Side_Lateral_Raise": [
+  "ombro"
+ ],
+ "Side_Laterals_to_Front_Raise": [
+  "ombro"
+ ],
+ "Side_Leg_Raises": [],
+ "Side_Lying_Groin_Stretch": [],
+ "Side_Neck_Stretch": [],
+ "Side_Standing_Long_Jump": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Side_To_Side_Chins": [
+  "ombro",
+  "cotovelo"
+ ],
+ "Side_Wrist_Pull": [],
+ "Side_to_Side_Box_Shuffle": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Single-Arm_Cable_Crossover": [
+  "ombro"
+ ],
+ "Single-Arm_Linear_Jammer": [
+  "ombro",
+  "lombar"
+ ],
+ "Single-Arm_Push-Up": [
+  "ombro",
+  "punho"
+ ],
+ "Single-Cone_Sprint_Drill": [
+  "joelho",
+  "tornozelo"
+ ],
+ "Single-Leg_High_Box_Squat": [
+  "joelho",
+  "quadril"
+ ],
+ "Single-Leg_Hop_Progression": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Single-Leg_Lateral_Hop": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Single-Leg_Leg_Extension": [
+  "joelho"
+ ],
+ "Single-Leg_Stride_Jump": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Single_Dumbbell_Raise": [
+  "ombro"
+ ],
+ "Single_Leg_Butt_Kick": [
+  "joelho",
+  "tornozelo"
+ ],
+ "Single_Leg_Glute_Bridge": [
+  "lombar",
+  "gestante"
+ ],
+ "Single_Leg_Push-off": [
+  "joelho",
+  "tornozelo"
+ ],
+ "Sit-Up": [
+  "lombar",
+  "cervical",
+  "gestante"
+ ],
+ "Snatch_Deadlift": [
+  "lombar",
+  "quadril",
+  "hipertensao"
+ ],
+ "Snatch_Pull": [
+  "lombar",
+  "ombro",
+  "hipertensao"
+ ],
+ "Snatch_Shrug": [
+  "cervical",
+  "lombar",
+  "ombro"
+ ],
+ "Snatch_from_Blocks": [
+  "ombro",
+  "lombar",
+  "punho"
+ ],
+ "Speed_Band_Overhead_Triceps": [
+  "ombro",
+  "cotovelo"
+ ],
+ "Speed_Box_Squat": [
+  "joelho",
+  "lombar",
+  "quadril"
+ ],
+ "Speed_Squats": [
+  "joelho",
+  "lombar",
+  "hipertensao"
+ ],
+ "Spell_Caster": [
+  "lombar",
+  "ombro"
+ ],
+ "Spider_Crawl": [
+  "punho",
+  "ombro",
+  "gestante"
+ ],
+ "Spider_Curl": [
+  "cotovelo",
+  "punho"
+ ],
+ "Spinal_Stretch": [],
+ "Split_Clean": [
+  "joelho",
+  "punho",
+  "lombar"
+ ],
+ "Split_Jerk": [
+  "ombro",
+  "joelho",
+  "lombar"
+ ],
+ "Split_Jump": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Split_Snatch": [
+  "ombro",
+  "lombar",
+  "joelho"
+ ],
+ "Split_Squat_with_Dumbbells": [
+  "joelho",
+  "quadril"
+ ],
+ "Split_Squats": [
+  "joelho",
+  "quadril"
+ ],
+ "Squat_Jerk": [
+  "ombro",
+  "joelho",
+  "lombar"
+ ],
+ "Squat_with_Bands": [
+  "joelho",
+  "lombar",
+  "hipertensao"
+ ],
+ "Squat_with_Chains": [
+  "joelho",
+  "lombar",
+  "hipertensao"
+ ],
+ "Squat_with_Plate_Movers": [
+  "joelho",
+  "lombar",
+  "ombro"
+ ],
+ "Squats_-_With_Bands": [
+  "joelho",
+  "lombar"
+ ],
+ "Stairmaster": [
+  "joelho",
+  "quadril"
+ ],
+ "Standing_Alternating_Dumbbell_Press": [
+  "ombro",
+  "lombar",
+  "hipertensao"
+ ],
+ "Standing_Barbell_Calf_Raise": [
+  "tornozelo",
+  "lombar"
+ ],
+ "Standing_Barbell_Press_Behind_Neck": [
+  "ombro",
+  "cervical",
+  "hipertensao"
+ ],
+ "Standing_Bent-Over_One-Arm_Dumbbell_Triceps_Extension": [
+  "lombar",
+  "cotovelo"
+ ],
+ "Standing_Bent-Over_Two-Arm_Dumbbell_Triceps_Extension": [
+  "lombar",
+  "cotovelo"
+ ],
+ "Standing_Biceps_Cable_Curl": [
+  "cotovelo",
+  "punho"
+ ],
+ "Standing_Biceps_Stretch": [],
+ "Sit_Squats": [
+  "joelho"
+ ],
+ "Skating": [
+  "joelho",
+  "tornozelo"
+ ],
+ "Sled_Drag_-_Harness": [
+  "joelho",
+  "lombar"
+ ],
+ "Sled_Overhead_Backward_Walk": [
+  "ombro",
+  "lombar"
+ ],
+ "Sled_Overhead_Triceps_Extension": [
+  "ombro",
+  "cotovelo"
+ ],
+ "Sled_Push": [
+  "joelho",
+  "lombar",
+  "hipertensao"
+ ],
+ "Sled_Reverse_Flye": [
+  "ombro"
+ ],
+ "Sled_Row": [
+  "ombro",
+  "lombar"
+ ],
+ "Sledgehammer_Swings": [
+  "lombar",
+  "ombro",
+  "gestante"
+ ],
+ "Smith_Incline_Shoulder_Raise": [
+  "ombro"
+ ],
+ "Smith_Machine_Behind_the_Back_Shrug": [
+  "ombro",
+  "cervical"
+ ],
+ "Smith_Machine_Bench_Press": [
+  "ombro",
+  "punho",
+  "gestante"
+ ],
+ "Smith_Machine_Bent_Over_Row": [
+  "lombar",
+  "ombro"
+ ],
+ "Smith_Machine_Calf_Raise": [
+  "tornozelo"
+ ],
+ "Smith_Machine_Close-Grip_Bench_Press": [
+  "punho",
+  "cotovelo",
+  "ombro"
+ ],
+ "Smith_Machine_Decline_Press": [
+  "ombro",
+  "hipertensao",
+  "gestante"
+ ],
+ "Smith_Machine_Hang_Power_Clean": [
+  "lombar",
+  "punho",
+  "ombro"
+ ],
+ "Smith_Machine_Hip_Raise": [
+  "lombar",
+  "gestante"
+ ],
+ "Smith_Machine_Incline_Bench_Press": [
+  "ombro",
+  "punho"
+ ],
+ "Smith_Machine_Leg_Press": [
+  "joelho",
+  "lombar"
+ ],
+ "Smith_Machine_One-Arm_Upright_Row": [
+  "ombro",
+  "punho"
+ ],
+ "Smith_Machine_Overhead_Shoulder_Press": [
+  "ombro",
+  "lombar",
+  "hipertensao"
+ ],
+ "Smith_Machine_Pistol_Squat": [
+  "joelho",
+  "tornozelo"
+ ],
+ "Smith_Machine_Reverse_Calf_Raises": [
+  "tornozelo"
+ ],
+ "Smith_Machine_Squat": [
+  "joelho",
+  "lombar",
+  "hipertensao"
+ ],
+ "Smith_Machine_Stiff-Legged_Deadlift": [
+  "lombar",
+  "quadril"
+ ],
+ "Smith_Machine_Upright_Row": [
+  "ombro",
+  "punho",
+  "cervical"
+ ],
+ "Smith_Single-Leg_Split_Squat": [
+  "joelho",
+  "quadril"
+ ],
+ "Snatch": [
+  "ombro",
+  "lombar",
+  "punho"
+ ],
+ "Snatch_Balance": [
+  "ombro",
+  "joelho",
+  "lombar"
+ ],
+ "Standing_Bradford_Press": [
+  "ombro",
+  "cervical",
+  "lombar"
+ ],
+ "Standing_Cable_Chest_Press": [
+  "ombro"
+ ],
+ "Standing_Cable_Lift": [
+  "lombar",
+  "gestante"
+ ],
+ "Standing_Cable_Wood_Chop": [
+  "lombar",
+  "gestante"
+ ],
+ "Standing_Calf_Raises": [
+  "tornozelo"
+ ],
+ "Standing_Concentration_Curl": [
+  "cotovelo"
+ ],
+ "Standing_Dumbbell_Calf_Raise": [
+  "tornozelo"
+ ],
+ "Standing_Dumbbell_Press": [
+  "ombro",
+  "lombar",
+  "hipertensao"
+ ],
+ "Standing_Dumbbell_Reverse_Curl": [
+  "punho",
+  "cotovelo"
+ ],
+ "Standing_Dumbbell_Straight-Arm_Front_Delt_Raise_Above_Head": [
+  "ombro",
+  "lombar"
+ ],
+ "Standing_Dumbbell_Triceps_Extension": [
+  "ombro",
+  "cotovelo"
+ ],
+ "Standing_Dumbbell_Upright_Row": [
+  "ombro",
+  "punho"
+ ],
+ "Standing_Elevated_Quad_Stretch": [
+  "joelho"
+ ],
+ "Standing_Front_Barbell_Raise_Over_Head": [
+  "ombro",
+  "lombar"
+ ],
+ "Standing_Gastrocnemius_Calf_Stretch": [],
+ "Standing_Hamstring_and_Calf_Stretch": [],
+ "Standing_Hip_Circles": [],
+ "Standing_Hip_Flexors": [],
+ "Standing_Inner-Biceps_Curl": [
+  "cotovelo"
+ ],
+ "Standing_Lateral_Stretch": [],
+ "Standing_Leg_Curl": [
+  "joelho"
+ ],
+ "Standing_Long_Jump": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Standing_Low-Pulley_Deltoid_Raise": [
+  "ombro"
+ ],
+ "Standing_Low-Pulley_One-Arm_Triceps_Extension": [
+  "cotovelo"
+ ],
+ "Standing_Military_Press": [
+  "ombro",
+  "lombar",
+  "hipertensao"
+ ],
+ "Standing_Olympic_Plate_Hand_Squeeze": [
+  "punho",
+  "hipertensao"
+ ],
+ "Standing_One-Arm_Cable_Curl": [
+  "cotovelo"
+ ],
+ "Standing_One-Arm_Dumbbell_Curl_Over_Incline_Bench": [
+  "cotovelo"
+ ],
+ "Standing_One-Arm_Dumbbell_Triceps_Extension": [
+  "ombro",
+  "cotovelo"
+ ],
+ "Standing_Overhead_Barbell_Triceps_Extension": [
+  "ombro",
+  "cotovelo",
+  "lombar"
+ ],
+ "Upright_Barbell_Row": [
+  "ombro",
+  "punho",
+  "cervical"
+ ],
+ "Upright_Cable_Row": [
+  "ombro",
+  "punho"
+ ],
+ "Upright_Row_-_With_Bands": [
+  "ombro",
+  "punho"
+ ],
+ "Upward_Stretch": [],
+ "V-Bar_Pulldown": [
+  "ombro"
+ ],
+ "V-Bar_Pullup": [
+  "ombro",
+  "cotovelo"
+ ],
+ "Vertical_Swing": [
+  "lombar",
+  "ombro",
+  "gestante"
+ ],
+ "Walking_Treadmill": [],
+ "Weighted_Ball_Hyperextension": [
+  "lombar",
+  "gestante"
+ ],
+ "Weighted_Ball_Side_Bend": [
+  "lombar",
+  "gestante"
+ ],
+ "Weighted_Bench_Dip": [
+  "ombro",
+  "punho",
+  "cotovelo"
+ ],
+ "Weighted_Crunches": [
+  "cervical",
+  "lombar",
+  "gestante"
+ ],
+ "Weighted_Jump_Squat": [
+  "joelho",
+  "lombar",
+  "gestante"
+ ],
+ "Weighted_Pull_Ups": [
+  "ombro",
+  "cotovelo"
+ ],
+ "Weighted_Sissy_Squat": [
+  "joelho",
+  "lombar"
+ ],
+ "Weighted_Sit-Ups_-_With_Bands": [
+  "lombar",
+  "cervical",
+  "gestante"
+ ],
+ "Weighted_Squat": [
+  "joelho",
+  "lombar",
+  "hipertensao"
+ ],
+ "Wide-Grip_Barbell_Bench_Press": [
+  "ombro",
+  "punho",
+  "gestante"
+ ],
+ "Wide-Grip_Decline_Barbell_Bench_Press": [
+  "ombro",
+  "hipertensao",
+  "gestante"
+ ],
+ "Wide-Grip_Decline_Barbell_Pullover": [
+  "ombro",
+  "hipertensao",
+  "gestante"
+ ],
+ "Wide-Grip_Lat_Pulldown": [
+  "ombro"
+ ],
+ "Wide-Grip_Pulldown_Behind_The_Neck": [
+  "ombro",
+  "cervical"
+ ],
+ "Wide-Grip_Rear_Pull-Up": [
+  "ombro",
+  "cervical"
+ ],
+ "Wide-Grip_Standing_Barbell_Curl": [
+  "punho",
+  "cotovelo"
+ ],
+ "Wide_Stance_Barbell_Squat": [
+  "joelho",
+  "quadril",
+  "lombar"
+ ],
+ "Wide_Stance_Stiff_Legs": [
+  "lombar",
+  "quadril",
+  "hipertensao"
+ ],
+ "Wind_Sprints": [
+  "tornozelo",
+  "joelho",
+  "gestante"
+ ],
+ "Windmills": [],
+ "Worlds_Greatest_Stretch": [],
+ "Wrist_Circles": [],
+ "Wrist_Roller": [
+  "punho",
+  "cotovelo"
+ ],
+ "Wrist_Rotations_with_Straight_Bar": [
+  "punho",
+  "cotovelo"
+ ],
+ "Yoke_Walk": [
+  "lombar",
+  "joelho",
+  "hipertensao"
+ ],
+ "Zercher_Squats": [
+  "joelho",
+  "lombar",
+  "cotovelo"
+ ],
+ "Zottman_Curl": [
+  "punho",
+  "cotovelo"
+ ],
+ "Zottman_Preacher_Curl": [
+  "punho",
+  "cotovelo"
+ ],
+ "Standing_Palm-In_One-Arm_Dumbbell_Press": [
+  "ombro",
+  "lombar"
+ ],
+ "Standing_Palms-In_Dumbbell_Press": [
+  "ombro",
+  "lombar"
+ ],
+ "Standing_Palms-Up_Barbell_Behind_The_Back_Wrist_Curl": [
+  "punho",
+  "ombro"
+ ],
+ "Standing_Pelvic_Tilt": [],
+ "Standing_Rope_Crunch": [
+  "lombar",
+  "gestante"
+ ],
+ "Standing_Soleus_And_Achilles_Stretch": [],
+ "Standing_Toe_Touches": [
+  "lombar"
+ ],
+ "Standing_Towel_Triceps_Extension": [
+  "cotovelo",
+  "ombro"
+ ],
+ "Standing_Two-Arm_Overhead_Throw": [
+  "ombro",
+  "lombar",
+  "gestante"
+ ],
+ "Star_Jump": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Step-up_with_Knee_Raise": [
+  "joelho",
+  "quadril"
+ ],
+ "Step_Mill": [
+  "joelho",
+  "quadril"
+ ],
+ "Stiff-Legged_Barbell_Deadlift": [
+  "lombar",
+  "quadril",
+  "hipertensao"
+ ],
+ "Stiff-Legged_Dumbbell_Deadlift": [
+  "lombar",
+  "quadril"
+ ],
+ "Stiff_Leg_Barbell_Good_Morning": [
+  "lombar",
+  "quadril",
+  "hipertensao"
+ ],
+ "Stomach_Vacuum": [
+  "gestante"
+ ],
+ "Straight-Arm_Dumbbell_Pullover": [
+  "ombro",
+  "gestante"
+ ],
+ "Straight-Arm_Pulldown": [
+  "ombro"
+ ],
+ "Straight_Bar_Bench_Mid_Rows": [
+  "ombro",
+  "lombar"
+ ],
+ "Straight_Raises_on_Incline_Bench": [
+  "ombro"
+ ],
+ "Stride_Jump_Crossover": [
+  "joelho",
+  "tornozelo",
+  "gestante"
+ ],
+ "Sumo_Deadlift": [
+  "lombar",
+  "quadril",
+  "hipertensao"
+ ],
+ "Sumo_Deadlift_with_Bands": [
+  "lombar",
+  "quadril",
+  "hipertensao"
+ ],
+ "Sumo_Deadlift_with_Chains": [
+  "lombar",
+  "quadril",
+  "hipertensao"
+ ],
+ "Superman": [
+  "lombar",
+  "gestante"
+ ],
+ "Supine_Chest_Throw": [
+  "ombro",
+  "gestante"
+ ],
+ "Supine_One-Arm_Overhead_Throw": [
+  "ombro",
+  "lombar",
+  "gestante"
+ ],
+ "Supine_Two-Arm_Overhead_Throw": [
+  "ombro",
+  "lombar",
+  "gestante"
+ ],
+ "Suspended_Fallout": [
+  "lombar",
+  "ombro",
+  "gestante"
+ ],
+ "Suspended_Push-Up": [
+  "ombro",
+  "punho"
+ ],
+ "Suspended_Reverse_Crunch": [
+  "lombar",
+  "punho",
+  "gestante"
+ ],
+ "Suspended_Row": [
+  "ombro",
+  "punho",
+  "lombar"
+ ],
+ "Suspended_Split_Squat": [
+  "joelho",
+  "quadril",
+  "tornozelo"
+ ],
+ "Svend_Press": [
+  "ombro",
+  "punho"
+ ],
+ "T-Bar_Row_with_Handle": [
+  "lombar",
+  "ombro"
+ ],
+ "Tate_Press": [
+  "ombro",
+  "cotovelo"
+ ],
+ "The_Straddle": [],
+ "Thigh_Abductor": [
+  "quadril"
+ ],
+ "Thigh_Adductor": [
+  "quadril"
+ ],
+ "Tire_Flip": [
+  "lombar",
+  "ombro",
+  "hipertensao"
+ ],
+ "Toe_Touchers": [
+  "lombar",
+  "cervical",
+  "gestante"
+ ],
+ "Torso_Rotation": [
+  "lombar"
+ ],
+ "Trail_Running_Walking": [
+  "joelho",
+  "tornozelo"
+ ],
+ "Trap_Bar_Deadlift": [
+  "lombar",
+  "joelho",
+  "hipertensao"
+ ],
+ "Tricep_Dumbbell_Kickback": [
+  "lombar",
+  "cotovelo"
+ ],
+ "Tricep_Side_Stretch": [],
+ "Triceps_Overhead_Extension_with_Rope": [
+  "ombro",
+  "cotovelo"
+ ],
+ "Triceps_Pushdown": [
+  "cotovelo"
+ ],
+ "Triceps_Pushdown_-_Rope_Attachment": [
+  "cotovelo"
+ ],
+ "Triceps_Pushdown_-_V-Bar_Attachment": [
+  "cotovelo",
+  "punho"
+ ],
+ "Triceps_Stretch": [],
+ "Tuck_Crunch": [
+  "cervical",
+  "lombar",
+  "gestante"
+ ],
+ "Two-Arm_Dumbbell_Preacher_Curl": [
+  "cotovelo",
+  "punho"
+ ],
+ "Two-Arm_Kettlebell_Clean": [
+  "punho",
+  "lombar",
+  "ombro"
+ ],
+ "Two-Arm_Kettlebell_Jerk": [
+  "ombro",
+  "lombar",
+  "hipertensao"
+ ],
+ "Two-Arm_Kettlebell_Military_Press": [
+  "ombro",
+  "lombar",
+  "hipertensao"
+ ],
+ "Two-Arm_Kettlebell_Row": [
+  "lombar",
+  "ombro"
+ ],
+ "Underhand_Cable_Pulldowns": [
+  "ombro",
+  "cotovelo"
+ ],
+ "Upper_Back-Leg_Grab": [
+  "lombar"
+ ],
+ "Upper_Back_Stretch": []
+}

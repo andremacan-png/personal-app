@@ -10,6 +10,7 @@ const admin = createClient(url, service, { db: { schema: "personal" }, auth: { p
 
 const base = JSON.parse(fs.readFileSync("scripts/exercicios/free-exercise-db.json", "utf8"));
 const trad = fs.existsSync("scripts/exercicios/traducoes.json") ? JSON.parse(fs.readFileSync("scripts/exercicios/traducoes.json", "utf8")) : {};
+const contra = fs.existsSync("scripts/exercicios/contraindicacoes.json") ? JSON.parse(fs.readFileSync("scripts/exercicios/contraindicacoes.json", "utf8")) : {};
 const slug = (s) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
 const linhas = base.map((e) => {
@@ -27,6 +28,7 @@ const linhas = base.map((e) => {
     mecanica: e.mechanic ? (MECANICAS[e.mechanic] ?? null) : null,
     instrucoes: t?.instrucoes?.length ? t.instrucoes : e.instructions,
     imagens: e.images.map((i) => IMG_BASE + i),
+    contraindicacoes: contra[e.id] ?? [],
     origem: "seed",
     atualizado_em: new Date().toISOString(),
   };
