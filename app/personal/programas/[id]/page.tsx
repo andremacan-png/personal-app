@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { exigirUsuario } from "@/lib/auth/dal";
 import { obterAluno } from "@/lib/dal/alunos";
 import { obterProgramaCompleto } from "@/lib/dal/programas";
+import { regioesAtivas } from "@/lib/dal/limitacoes";
+import { conflitos, ROTULO_REGIAO } from "@/lib/limitacoes";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { NavPersonal } from "@/components/nav-personal";
@@ -16,7 +18,8 @@ export default async function PaginaPrograma({ params, searchParams }: { params:
   const [{ id }, { dia: diaSel }] = await Promise.all([params, searchParams]);
   const p = await obterProgramaCompleto(id);
   if (!p) notFound();
-  const aluno = await obterAluno(p.aluno_id);
+  const [aluno, limitacoes] = await Promise.all([obterAluno(p.aluno_id), regioesAtivas(p.aluno_id)]);
+  const totalConflitos = p.dias.flatMap((d) => d.exercicios).filter((x) => conflitos(x.exercicio.contraindicacoes, limitacoes).length > 0).length;
   const diaAtual = p.dias.find((d) => d.id === diaSel) ?? p.dias[0];
   const inp = "h-8 rounded-md border bg-white px-2 text-sm";
 
@@ -45,6 +48,12 @@ export default async function PaginaPrograma({ params, searchParams }: { params:
         </div>
       </header>
       {!p.ativo && <p className="mt-2 rounded bg-neutral-100 p-2 text-sm text-neutral-600">Programa encerrado: o aluno não vê este treino.</p>}
+      {limitacoes.length > 0 && (
+        <p className={`mt-2 rounded p-2 text-sm ${totalConflitos ? "bg-amber-50 text-amber-900" : "bg-neutral-50 text-neutral-600"}`}>
+          Limitações ativas de {aluno?.nome?.split(" ")[0]}: {limitacoes.map((r) => ROTULO_REGIAO[r] ?? r).join(", ")}.
+          {totalConflitos ? ` ⚠ ${totalConflitos} exercício(s) com possível conflito, marcados abaixo.` : " Nenhum conflito no programa."}
+        </p>
+      )}
 
       {/* abas de dias */}
       <div className="mt-6 flex flex-wrap items-center gap-2">
@@ -93,6 +102,10 @@ export default async function PaginaPrograma({ params, searchParams }: { params:
                     ) : <div className="h-14 w-14 flex-none rounded bg-neutral-100" />}
                     <div className="min-w-0 flex-1">
                       <p className="font-medium"><span className="text-neutral-400">{i + 1}.</span> {x.exercicio.nome} <span className="text-xs text-neutral-500">· {x.exercicio.grupo_muscular}</span></p>
+                      {conflitos(x.exercicio.contraindicacoes, limitacoes).length > 0 && (
+                        <p className="mt-0.5 text-xs text-amber-800">⚠ Cuidado com {conflitos(x.exercicio.contraindicacoes, limitacoes).map((r) => ROTULO_REGIAO[r] ?? r).join(", ")}.{" "}
+                          <Link href={`/personal/programas/${p.id}/adicionar?dia=${diaAtual.id}&grupo=${encodeURIComponent(x.exercicio.grupo_muscular)}&trocar=${x.id}`} className="underline">Ver alternativas</Link></p>
+                      )}
                       <form action={atualizarItemAction} className="mt-2 flex flex-wrap items-end gap-2">
                         <input type="hidden" name="programa_id" value={p.id} /><input type="hidden" name="item_id" value={x.id} />
                         <label className="text-xs text-neutral-500">Séries<br /><input name="series" type="number" min={1} max={20} defaultValue={x.series} className={`${inp} w-16`} /></label>

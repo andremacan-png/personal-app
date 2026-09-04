@@ -3,6 +3,8 @@ import Link from "next/link";
 const ITENS = [
   { href: "/aluno", rotulo: "Treino" },
   { href: "/aluno/historico", rotulo: "Histórico" },
+  { href: "/aluno/evolucao", rotulo: "Evolução" },
+  { href: "/aluno/perfil", rotulo: "Meu corpo" },
 ];
 
 export function NavAluno({ atual }: { atual: string }) {

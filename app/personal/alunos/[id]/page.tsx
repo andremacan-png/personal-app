@@ -7,6 +7,8 @@ import { listarExecucoes } from "@/lib/dal/execucoes";
 import { formatarDuracao, rotuloRelativo } from "@/lib/datas";
 import { resumirConsistencia } from "@/lib/streak";
 import { CalendarioPresenca } from "@/components/calendario-presenca";
+import { PainelLimitacoes } from "@/components/limitacoes";
+import { listarLimitacoes } from "@/lib/dal/limitacoes";
 import { urlBase } from "@/lib/url";
 import { linkConvite, linkWhatsApp, mensagemConvite } from "@/lib/convite";
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -23,7 +25,7 @@ export default async function PaginaAluno({ params }: { params: Promise<{ id: st
   const { id } = await params;
   const aluno = await obterAluno(id);
   if (!aluno) notFound();
-  const [programas, personal, base, execucoes] = await Promise.all([listarProgramasDoAluno(id), meuPersonal(), urlBase(), listarExecucoes(id, 100)]);
+  const [programas, personal, base, execucoes, limitacoes] = await Promise.all([listarProgramasDoAluno(id), meuPersonal(), urlBase(), listarExecucoes(id, 100), listarLimitacoes(id)]);
   const consistencia = resumirConsistencia(execucoes.map((e) => e.concluido_em!), 3);
   const link = linkConvite(base, aluno.convite_token);
   const wa = linkWhatsApp(aluno.telefone, mensagemConvite(aluno.nome, personal?.nome ?? "seu personal", link));
@@ -72,6 +74,8 @@ export default async function PaginaAluno({ params }: { params: Promise<{ id: st
         </section>
       )}
 
+      <div className="mt-6"><PainelLimitacoes alunoId={aluno.id} lista={limitacoes} papel="personal" /></div>
+
       <section className="mt-8">
         <div className="flex items-center justify-between">
           <h2 className="text-lg font-medium">Programas de treino</h2>
@@ -98,7 +102,7 @@ export default async function PaginaAluno({ params }: { params: Promise<{ id: st
 
       {execucoes.length > 0 && (
         <section className="mt-8">
-          <h2 className="text-lg font-medium">Últimos treinos</h2>
+          <div className="flex items-center justify-between"><h2 className="text-lg font-medium">Últimos treinos</h2><Link href={`/personal/alunos/${aluno.id}/evolucao`} className="text-sm underline">ver evolução</Link></div>
           <ul className="mt-2 divide-y rounded-lg border text-sm">
             {execucoes.slice(0, 15).map((e) => (
               <li key={e.id} className="p-3">

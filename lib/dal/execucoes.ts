@@ -92,3 +92,30 @@ export async function execucoesDoTenant(dias = 7): Promise<Execucao[]> {
   const { data } = await supabase.from("execucoes").select("*").not("concluido_em", "is", null).gte("concluido_em", desde).order("concluido_em", { ascending: false });
   return (data ?? []) as Execucao[];
 }
+
+export type PontoEvolucao = { data: string; cargaMax: number; volume: number; repsTotal: number };
+export type EvolucaoExercicio = { exercicio_id: string; nome: string; pontos: PontoEvolucao[] };
+
+/** Evolução por exercício: por treino concluído, carga máxima, volume (reps×carga) e reps totais das séries feitas. */
+export async function evolucaoPorExercicio(alunoId: string, limiteExecucoes = 60): Promise<EvolucaoExercicio[]> {
+  const supabase = await criarClienteServidor();
+  const { data: execs } = await supabase.from("execucoes").select("id, concluido_em").eq("aluno_id", alunoId).not("concluido_em", "is", null).order("concluido_em", { ascending: false }).limit(limiteExecucoes);
+  const ids = (execs ?? []).map((e) => e.id);
+  if (ids.length === 0) return [];
+  const quando = new Map((execs ?? []).map((e) => [e.id, e.concluido_em as string]));
+  const { data: series } = await supabase.from("execucao_series").select("execucao_id, exercicio_id, nome_exercicio, repeticoes, carga, concluida").in("execucao_id", ids).eq("concluida", true);
+  const mapa = new Map<string, { nome: string; porExec: Map<string, PontoEvolucao> }>();
+  for (const s of series ?? []) {
+    const ex = mapa.get(s.exercicio_id) ?? { nome: s.nome_exercicio, porExec: new Map() };
+    const data = quando.get(s.execucao_id)!.slice(0, 10);
+    const p = ex.porExec.get(s.execucao_id) ?? { data, cargaMax: 0, volume: 0, repsTotal: 0 };
+    p.cargaMax = Math.max(p.cargaMax, Number(s.carga ?? 0));
+    p.volume += Number(s.repeticoes ?? 0) * Number(s.carga ?? 0);
+    p.repsTotal += Number(s.repeticoes ?? 0);
+    ex.porExec.set(s.execucao_id, p); mapa.set(s.exercicio_id, ex);
+  }
+  return [...mapa.entries()]
+    .map(([exercicio_id, v]) => ({ exercicio_id, nome: v.nome, pontos: [...v.porExec.values()].sort((a, b) => a.data.localeCompare(b.data)) }))
+    .filter((e) => e.pontos.length > 0)
+    .sort((a, b) => b.pontos.length - a.pontos.length);
+}

@@ -3,25 +3,30 @@ import { notFound } from "next/navigation";
 import { exigirUsuario } from "@/lib/auth/dal";
 import { obterProgramaCompleto } from "@/lib/dal/programas";
 import { GRUPOS, listarExercicios } from "@/lib/dal/exercicios";
+import { regioesAtivas } from "@/lib/dal/limitacoes";
+import { conflitos, ROTULO_REGIAO } from "@/lib/limitacoes";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { adicionarExercicioAction } from "../../actions";
 
-export default async function PaginaAdicionarExercicio({ params, searchParams }: { params: Promise<{ id: string }>; searchParams: Promise<{ dia?: string; q?: string; grupo?: string }> }) {
+export default async function PaginaAdicionarExercicio({ params, searchParams }: { params: Promise<{ id: string }>; searchParams: Promise<{ dia?: string; q?: string; grupo?: string; trocar?: string }> }) {
   await exigirUsuario("personal");
-  const [{ id }, { dia, q = "", grupo = "" }] = await Promise.all([params, searchParams]);
+  const [{ id }, { dia, q = "", grupo = "", trocar = "" }] = await Promise.all([params, searchParams]);
   const p = await obterProgramaCompleto(id);
   const d = p?.dias.find((x) => x.id === dia);
   if (!p || !d) notFound();
-  const lista = await listarExercicios({ busca: q, grupo: grupo || undefined, limite: 40 });
+  const [listaBruta, limitacoes] = await Promise.all([listarExercicios({ busca: q, grupo: grupo || undefined, limite: 60 }), regioesAtivas(p.aluno_id)]);
+  const lista = listaBruta.map((e) => ({ ...e, conflito: conflitos(e.contraindicacoes, limitacoes) })).sort((a, b) => a.conflito.length - b.conflito.length);
+  const trocando = d.exercicios.find((x) => x.id === trocar);
   const jaTem = new Set(d.exercicios.map((x) => x.exercicio_id));
 
   return (
     <main className="mx-auto max-w-3xl p-6">
       <Link href={`/personal/programas/${id}?dia=${d.id}`} className="text-sm text-neutral-500 hover:underline">← {p.nome} · {d.nome}</Link>
-      <h1 className="text-2xl font-semibold">Adicionar exercício em {d.nome}</h1>
+      <h1 className="text-2xl font-semibold">{trocando ? `Trocar "${trocando.exercicio.nome}"` : `Adicionar exercício em ${d.nome}`}</h1>
+      {limitacoes.length > 0 && <p className="text-sm text-neutral-600">Sem conflito primeiro; ⚠ marca conflito com: {limitacoes.map((r) => ROTULO_REGIAO[r] ?? r).join(", ")}.</p>}
       <form className="mt-4 flex flex-wrap gap-2" action={`/personal/programas/${id}/adicionar`}>
-        <input type="hidden" name="dia" value={d.id} />
+        <input type="hidden" name="dia" value={d.id} />{trocar && <input type="hidden" name="trocar" value={trocar} />}
         <Input name="q" defaultValue={q} placeholder="Buscar..." className="max-w-xs" autoFocus />
         <select name="grupo" defaultValue={grupo} className="h-9 rounded-md border bg-white px-2 text-sm">
           <option value="">Todos os grupos</option>
@@ -39,10 +44,12 @@ export default async function PaginaAdicionarExercicio({ params, searchParams }:
             <div className="min-w-0 flex-1">
               <p className="truncate text-sm font-medium">{e.nome}</p>
               <p className="text-xs text-neutral-500">{e.grupo_muscular}{e.equipamento ? ` · ${e.equipamento}` : ""}{e.personal_id ? " · seu" : ""}</p>
+              {e.conflito.length > 0 && <p className="text-xs text-amber-800">⚠ {e.conflito.map((r) => ROTULO_REGIAO[r] ?? r).join(", ")}</p>}
             </div>
             <form action={adicionarExercicioAction}>
               <input type="hidden" name="programa_id" value={id} /><input type="hidden" name="dia_id" value={d.id} /><input type="hidden" name="exercicio_id" value={e.id} />
-              <Button type="submit" size="sm" variant={jaTem.has(e.id) ? "outline" : "default"}>{jaTem.has(e.id) ? "Adicionar de novo" : "Adicionar"}</Button>
+              {trocando && <input type="hidden" name="trocar" value={trocando.id} />}
+              <Button type="submit" size="sm" variant={jaTem.has(e.id) ? "outline" : "default"}>{trocando ? "Trocar por este" : jaTem.has(e.id) ? "Adicionar de novo" : "Adicionar"}</Button>
             </form>
           </li>
         ))}

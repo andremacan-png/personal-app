@@ -70,8 +70,21 @@ export async function removerDiaAction(form: FormData) {
 
 export async function adicionarExercicioAction(form: FormData) {
   await exigirUsuario("personal");
-  const programaId = s(form, "programa_id"), diaId = s(form, "dia_id");
-  await adicionarExercicioAoDia(diaId, s(form, "exercicio_id"));
+  const programaId = s(form, "programa_id"), diaId = s(form, "dia_id"), trocar = s(form, "trocar");
+  const novoId = await adicionarExercicioAoDia(diaId, s(form, "exercicio_id"));
+  if (trocar) {
+    // Troca: herda séries/reps/descanso/observação do item antigo, assume a posição dele e o remove.
+    const { obterProgramaCompleto, atualizarExercicioDoDia: atualizar, removerExercicioDoDia: remover } = await import("@/lib/dal/programas");
+    const prog = await obterProgramaCompleto(programaId);
+    const antigo = prog?.dias.flatMap((d) => d.exercicios).find((x) => x.id === trocar);
+    if (antigo) {
+      await atualizar(novoId, { series: antigo.series, repeticoes: antigo.repeticoes, descanso_seg: antigo.descanso_seg, observacao: antigo.observacao });
+      const { criarClienteServidor } = await import("@/lib/supabase/server");
+      const supabase = await criarClienteServidor();
+      await supabase.from("programa_exercicios").update({ ordem: antigo.ordem }).eq("id", novoId);
+      await remover(antigo.id);
+    }
+  }
   rev(programaId);
   redirect(`/personal/programas/${programaId}?dia=${diaId}`);
 }
