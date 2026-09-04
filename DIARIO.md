@@ -13,7 +13,7 @@ Projeto tocado em conversas do Claude Code. Cada conversa lê este arquivo + mem
 
 ## Pendências abertas
 - [ ] André: expor o schema `personal` na Data API do projeto `instagram-isabel` (Integrations → Data API → Settings → Exposed schemas)
-- [ ] Vercel: criar projeto ligado ao repo + variáveis de ambiente
+- [ ] Vercel: projeto `personal-app` ligado ao repo + variáveis cadastradas; **falta o push do André** para o 1º deploy (URL sai depois)
 - [ ] Fase 3: migrar o banco para org Supabase própria (Pro) quando pagar a conta
 - [ ] Amigo: responder `docs/05-QUESTIONARIO-AMIGO.md`
 - [ ] Definir preço por aluno e faixa grátis (`docs/06-MODELO-NEGOCIO.md`)
@@ -39,4 +39,4 @@ Projeto tocado em conversas do Claude Code. Cada conversa lê este arquivo + mem
 - Schema exposto na Data API pelo André → **teste de RLS 10/10 contra o banco real** (personal X não vê Y; aluno só vê a si; UPDATE alheio = 0 linhas; auto-promoção = erro 42501). Banco limpo depois (afterAll apaga os usuários de teste).
 - Lições: (1) insert em lote no supabase-js manda `null` nas colunas ausentes em alguma linha, o DEFAULT não se aplica; (2) quando USING acha a linha e WITH CHECK barra, o Postgres devolve erro, não 0 linhas; (3) `describe.skip` executa o corpo.
 - Seed do personal de teste do e2e: `npm run seed:e2e` (lê `.env.test.local`).
-
+- E2E 3/3 contra o preview (visitante → login; senha errada → erro; personal real → `/personal`). Vercel: projeto `personal-app` (time andre-macan-s-projects) linkado ao repo GitHub, env `NEXT_PUBLIC_SUPABASE_*` em production+preview. Deploy acontece no próximo push.
