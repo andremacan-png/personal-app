@@ -36,4 +36,7 @@ Projeto tocado em conversas do Claude Code. Cada conversa lê este arquivo + mem
 - Clientes e teste de RLS usam `db.schema = "personal"` (`lib/supabase/config.ts`).
 - Repo no GitHub: `andremacan-png/personal-app` (push é do André; a trava não deixa eu enviar).
 - Questionário do amigo também em PDF (`docs/`) e Google Doc.
+- Schema exposto na Data API pelo André → **teste de RLS 10/10 contra o banco real** (personal X não vê Y; aluno só vê a si; UPDATE alheio = 0 linhas; auto-promoção = erro 42501). Banco limpo depois (afterAll apaga os usuários de teste).
+- Lições: (1) insert em lote no supabase-js manda `null` nas colunas ausentes em alguma linha, o DEFAULT não se aplica; (2) quando USING acha a linha e WITH CHECK barra, o Postgres devolve erro, não 0 linhas; (3) `describe.skip` executa o corpo.
+- Seed do personal de teste do e2e: `npm run seed:e2e` (lê `.env.test.local`).
 

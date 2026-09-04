@@ -10,7 +10,8 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "seed:e2e": "node --env-file=.env.test.local scripts/seed-e2e.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",

@@ -43,14 +43,17 @@ rodar("RLS · fundação", () => {
     const a = await usuario("aluno", "Aluno A");
     personalX = x.cliente; personalY = y.cliente; alunoA = a.cliente;
 
-    const { data: px } = await admin.from("personals").select("id").eq("profile_id", x.id).single();
-    tenantX = px!.id;
-    const { data: al } = await admin.from("alunos")
+    const { data: px, error: ePx } = await admin.from("personals").select("id").eq("profile_id", x.id).single();
+    if (ePx || !px) throw new Error("personal X sem tenant (trigger não rodou?): " + JSON.stringify(ePx));
+    tenantX = px.id;
+    // Insert em lote: supabase-js manda null nas colunas que faltam em alguma linha (o default NÃO se aplica).
+    const { data: al, error: eAl } = await admin.from("alunos")
       .insert([
         { personal_id: tenantX, nome: "Aluno A", profile_id: a.id, status: "ativo" },
-        { personal_id: tenantX, nome: "Aluno B" },
+        { personal_id: tenantX, nome: "Aluno B", status: "convidado" },
       ]).select("id");
-    alunoAId = al![0].id; alunoBId = al![1].id;
+    if (eAl || !al) throw new Error("insert alunos falhou: " + JSON.stringify(eAl));
+    alunoAId = al[0].id; alunoBId = al[1].id;
   });
 
   afterAll(async () => {
@@ -85,7 +88,12 @@ rodar("RLS · fundação", () => {
   });
 
   it("aluno não consegue se promover a personal", async () => {
-    const { data } = await alunoA.from("profiles").update({ papel: "personal" }).eq("id", (await alunoA.auth.getUser()).data.user!.id).select("papel");
-    expect(data).toEqual([]);
+    const meuId = (await alunoA.auth.getUser()).data.user!.id;
+    // Aqui o USING acha a linha, mas o WITH CHECK barra: o Postgres devolve ERRO (não 0 linhas).
+    const { data, error } = await alunoA.from("profiles").update({ papel: "personal" }).eq("id", meuId).select("papel");
+    expect(error?.code).toBe("42501");
+    expect(data).toBeNull();
+    const { data: intacto } = await admin.from("profiles").select("papel").eq("id", meuId).single();
+    expect(intacto?.papel).toBe("aluno");
   });
 });
