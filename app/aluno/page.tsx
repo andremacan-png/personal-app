@@ -4,6 +4,8 @@ import { meuPersonal } from "@/lib/dal/alunos";
 import { programaAtivoDoAluno } from "@/lib/dal/programas";
 import { listarExecucoes, meuAlunoId, ultimaExecucaoPorDia } from "@/lib/dal/execucoes";
 import { rotuloRelativo } from "@/lib/datas";
+import { resumirConsistencia } from "@/lib/streak";
+import { CalendarioPresenca } from "@/components/calendario-presenca";
 import { sair } from "@/app/login/actions";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { NavAluno } from "@/components/nav-aluno";
@@ -14,6 +16,8 @@ export default async function InicioAluno() {
   const programa = alunoId ? await programaAtivoDoAluno(alunoId) : null;
   const ultimas: Record<string, string> = alunoId ? await ultimaExecucaoPorDia(alunoId, programa?.dias.map((d) => d.id) ?? []) : {};
   const recentes = alunoId ? await listarExecucoes(alunoId, 5) : [];
+  const historico = alunoId ? await listarExecucoes(alunoId, 200) : [];
+  const consistencia = resumirConsistencia(historico.map((e) => e.concluido_em!), programa?.dias.length ?? 1);
   // Sugestão simples: o dia menos recente (ou o primeiro nunca feito)
   const sugerido = programa?.dias.length
     ? [...programa.dias].sort((a, b) => (ultimas[a.id] ?? "").localeCompare(ultimas[b.id] ?? ""))[0]
@@ -55,6 +59,23 @@ export default async function InicioAluno() {
             })}
           </ul>
         </>
+      )}
+
+      {alunoId && programa && (
+        <section className="mt-6 rounded-xl border p-4">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-xs uppercase tracking-wide text-neutral-500">Esta semana</p>
+              <p className="text-2xl font-semibold">{consistencia.treinosEstaSemana}<span className="text-base font-normal text-neutral-500">/{consistencia.metaSemanal} treinos</span></p>
+            </div>
+            <div className="text-right">
+              <p className="text-xs uppercase tracking-wide text-neutral-500">Sequência</p>
+              <p className="text-2xl font-semibold">🔥 {consistencia.semanasSeguidas}<span className="text-base font-normal text-neutral-500"> {consistencia.semanasSeguidas === 1 ? "semana" : "semanas"}</span></p>
+            </div>
+          </div>
+          <div className="mt-3"><CalendarioPresenca diasTreinados={consistencia.diasTreinados} /></div>
+          <p className="mt-2 text-xs text-neutral-500">{consistencia.treinosEstaSemana >= consistencia.metaSemanal ? "Meta da semana batida. Não quebre a corrente!" : `Faltam ${consistencia.metaSemanal - consistencia.treinosEstaSemana} para fechar a semana.`}</p>
+        </section>
       )}
 
       {recentes.length > 0 && (

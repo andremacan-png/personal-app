@@ -3,6 +3,10 @@ import { notFound } from "next/navigation";
 import { exigirUsuario } from "@/lib/auth/dal";
 import { meuPersonal, obterAluno } from "@/lib/dal/alunos";
 import { listarProgramasDoAluno } from "@/lib/dal/programas";
+import { listarExecucoes } from "@/lib/dal/execucoes";
+import { formatarDuracao, rotuloRelativo } from "@/lib/datas";
+import { resumirConsistencia } from "@/lib/streak";
+import { CalendarioPresenca } from "@/components/calendario-presenca";
 import { urlBase } from "@/lib/url";
 import { linkConvite, linkWhatsApp, mensagemConvite } from "@/lib/convite";
 import { buttonVariants } from "@/components/ui/button";
@@ -17,7 +21,8 @@ export default async function PaginaAluno({ params }: { params: Promise<{ id: st
   const { id } = await params;
   const aluno = await obterAluno(id);
   if (!aluno) notFound();
-  const [programas, personal, base] = await Promise.all([listarProgramasDoAluno(id), meuPersonal(), urlBase()]);
+  const [programas, personal, base, execucoes] = await Promise.all([listarProgramasDoAluno(id), meuPersonal(), urlBase(), listarExecucoes(id, 100)]);
+  const consistencia = resumirConsistencia(execucoes.map((e) => e.concluido_em!), 3);
   const link = linkConvite(base, aluno.convite_token);
   const wa = linkWhatsApp(aluno.telefone, mensagemConvite(aluno.nome, personal?.nome ?? "seu personal", link));
 
@@ -37,6 +42,17 @@ export default async function PaginaAluno({ params }: { params: Promise<{ id: st
             <BotaoCopiar texto={link} rotulo="Copiar link" />
             {wa && <a href={wa} target="_blank" rel="noopener" className={buttonVariants({ size: "sm" })}>Mandar no WhatsApp</a>}
           </div>
+        </section>
+      )}
+
+      {aluno.status !== "convidado" && (
+        <section className="mt-6 grid gap-4 rounded-lg border p-4 sm:grid-cols-[auto_1fr] sm:items-center">
+          <div className="flex gap-6">
+            <div><p className="text-xs uppercase text-neutral-500">Semana</p><p className="text-2xl font-semibold">{consistencia.treinosEstaSemana}</p></div>
+            <div><p className="text-xs uppercase text-neutral-500">Sequência</p><p className="text-2xl font-semibold">🔥 {consistencia.semanasSeguidas}</p></div>
+            <div><p className="text-xs uppercase text-neutral-500">Total</p><p className="text-2xl font-semibold">{consistencia.totalTreinos}</p></div>
+          </div>
+          <div className="max-w-xs"><CalendarioPresenca diasTreinados={consistencia.diasTreinados} /></div>
         </section>
       )}
 
@@ -63,6 +79,20 @@ export default async function PaginaAluno({ params }: { params: Promise<{ id: st
         )}
         <FormularioNovoPrograma alunoId={aluno.id} />
       </section>
+
+      {execucoes.length > 0 && (
+        <section className="mt-8">
+          <h2 className="text-lg font-medium">Últimos treinos</h2>
+          <ul className="mt-2 divide-y rounded-lg border text-sm">
+            {execucoes.slice(0, 15).map((e) => (
+              <li key={e.id} className="p-3">
+                <div className="flex justify-between"><span className="font-medium">{e.nome_dia}</span><span className="text-neutral-500">{rotuloRelativo(e.concluido_em)}{e.duracao_seg ? ` · ${formatarDuracao(e.duracao_seg)}` : ""}{e.rpe ? ` · esforço ${e.rpe}` : ""}</span></div>
+                {e.observacao && <p className="mt-1 text-amber-800">💬 {e.observacao}</p>}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
     </main>
   );
 }
