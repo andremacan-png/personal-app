@@ -3,6 +3,7 @@
 import { redirect } from "next/navigation";
 import { criarClienteServidor } from "@/lib/supabase/server";
 import { destinoSeguro } from "@/lib/auth/rotas";
+import { criarContaConfirmada, validarCadastro } from "@/lib/auth/cadastro";
 
 export type EstadoLogin = { erro?: string } | undefined;
 
@@ -19,19 +20,17 @@ export async function entrar(_: EstadoLogin, form: FormData): Promise<EstadoLogi
 
 export async function cadastrarPersonal(_: EstadoLogin, form: FormData): Promise<EstadoLogin> {
   const nome = String(form.get("nome") ?? "").trim();
-  const email = String(form.get("email") ?? "").trim();
+  const email = String(form.get("email") ?? "").trim().toLowerCase();
   const senha = String(form.get("senha") ?? "");
-  if (nome.length < 2) return { erro: "Informe seu nome." };
-  if (senha.length < 8) return { erro: "A senha precisa ter pelo menos 8 caracteres." };
+  const invalido = validarCadastro(nome, email, senha);
+  if (invalido) return { erro: invalido };
 
+  // Conta nasce confirmada pelo servidor (decisão #10): sem e-mail de confirmação no piloto.
+  const criado = await criarContaConfirmada({ email, senha, nome, papel: "personal" });
+  if (!criado.ok) return { erro: criado.erro };
   const supabase = await criarClienteServidor();
-  const { error } = await supabase.auth.signUp({
-    email,
-    password: senha,
-    // O trigger no banco lê estes metadados para criar profiles + personals.
-    options: { data: { nome, papel: "personal" } },
-  });
-  if (error) return { erro: error.message };
+  const { error } = await supabase.auth.signInWithPassword({ email, password: senha });
+  if (error) return { erro: "Conta criada, mas não foi possível entrar: " + error.message };
   redirect("/");
 }
 

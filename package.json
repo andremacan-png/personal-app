@@ -11,7 +11,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
-    "seed:e2e": "node --env-file=.env.test.local scripts/seed-e2e.mjs"
+    "seed:e2e": "node --env-file=.env.test.local scripts/seed-e2e.mjs",
+    "dev:test": "next dev -p 3100"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",

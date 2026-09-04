@@ -15,3 +15,10 @@ if (existente) {
   if (error) { console.error(error.message); process.exit(1); }
   console.log("personal e2e criado");
 }
+
+// Limpeza: alunos e contas criados pelo e2e (e2e-aluno-*), para o banco não acumular lixo.
+const lixo = (lista?.users ?? []).filter((u) => u.email?.startsWith("e2e-aluno-"));
+for (const u of lixo) await admin.auth.admin.deleteUser(u.id);
+const { data: pe } = await admin.from("personals").select("id").eq("profile_id", existente?.id ?? (await admin.auth.admin.listUsers({ perPage: 1000 })).data.users.find((u) => u.email === email).id).single();
+const { count } = await admin.from("alunos").delete({ count: "exact" }).eq("personal_id", pe.id).like("nome", "Carla E2E %");
+console.log(`limpeza: ${lixo.length} conta(s) de aluno e2e, ${count ?? 0} aluno(s) de teste removidos`);

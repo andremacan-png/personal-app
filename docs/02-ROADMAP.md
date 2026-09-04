@@ -12,9 +12,9 @@ Critério de pronto: CI verde, deploy na Vercel com login funcionando, RLS testa
 - [x] Schema `personal` exposto na Data API; teste de RLS 10/10 contra o banco
 - [x] Repo GitHub `andremacan-png/personal-app` + Vercel (produção pública em personal-app-ebon-two.vercel.app) + e2e 3/3 na produção
 
-## Fase 1 · Piloto ⚪ (alvo: 2-3 semanas)
+## Fase 1 · Piloto 🟡 (início 04/09, alvo: 2-3 semanas)
 Critério de pronto: 3 alunos reais treinando 1 semana pelo app.
-- [ ] Cadastro de aluno + link de convite (WhatsApp) + onboarding do aluno
+- [x] Cadastro de aluno + link de convite (WhatsApp) + aceite com criação de conta (04/09; RLS + e2e)
 - [ ] Biblioteca: seed free-exercise-db traduzido + exercícios próprios do personal (com vídeo/gif)
 - [ ] Programa: dias, exercícios, séries/reps/carga/descanso/observação; duplicar programa
 - [ ] Aluno: treino de hoje, execução série a série, concluir, histórico

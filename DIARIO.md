@@ -6,7 +6,7 @@ Projeto tocado em conversas do Claude Code. Cada conversa lê este arquivo + mem
 | Frente | Estado | Onde |
 |---|---|---|
 | Fundação (repo, docs, auth, CI, deploy) | ✅ concluída 04/09 | `docs/02-ROADMAP.md` Fase 0 |
-| Piloto (treino + execução + streak) | 🟡 próxima | Fase 1 |
+| Piloto (treino + execução + streak) | 🟡 em andamento (1/7 itens) | Fase 1 |
 | Diferencial (evolução, gamificação, IA) | ⚪ | Fase 2 |
 | Dinheiro (Asaas) | ⚪ | Fase 3 |
 | Escala (lembretes, nativo) | ⚪ | Fase 4 |
@@ -48,4 +48,12 @@ Projeto tocado em conversas do Claude Code. Cada conversa lê este arquivo + mem
 - 1º deploy deu 500: as variáveis `NEXT_PUBLIC_SUPABASE_*` estavam vazias no projeto. Recriadas via CLI (production + preview) e redeploy → **e2e 3/3 contra a produção** (visitante → login; senha errada; personal real → `/personal`).
 - Lição: `vercel env pull` traz variáveis "sensitive" vazias, então o teste é sempre a URL respondendo; e `vercel redeploy` não aceita `--yes`.
 - Fase 0 fechada. Próximo passo = Fase 1 (convite de aluno, biblioteca, programa, treino do dia), começando pelas respostas do questionário do amigo.
+
+### 2026-09-04 · Fase 1 · incremento 1: alunos + convite ✅
+- Migração `personal_0002_convite`: RPCs `info_convite` (anon vê só nomes) e `aceitar_convite` (atômica, só conta de aluno, token de uso único).
+- Telas: `/personal/alunos` (lista, status, copiar link, botão WhatsApp `wa.me` com mensagem pronta), `/personal/alunos/novo`, `/convite/[token]` (cria conta + entra + aceita), `/personal` com contadores, `/aluno` mostra o personal.
+- Decisões #10 (contas confirmadas pelo servidor, sem e-mail) e #11 (convite via RPC). Cadastro do personal também passou pelo servidor.
+- Provas: vitest 20/20 (unit + RLS do convite contra o banco), **e2e 4/4** com o fluxo completo em 2 navegadores. `npm run seed:e2e` cria o personal de teste e limpa os alunos que o e2e gerou.
+- Ambiente: `.env.development.local` → symlink para `.env.test.local` (chave de serviço no servidor local); preview em `npm run dev:test` (3100).
+- Próximo incremento: biblioteca de exercícios (seed free-exercise-db traduzido + exercícios próprios).
 

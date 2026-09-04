@@ -60,3 +60,20 @@ Cobrar o aluno pelo app é feature opcional para depois, não o modelo.
 ## 9. IA sugere, personal aprova (decidido, Fase 2)
 **Por quê**: responsabilidade profissional é do personal; a IA acelera, não decide. Regras duras
 (contraindicação vetada) ficam no banco; a IA só propõe dentro do permitido.
+
+## 10. Contas nascem confirmadas pelo servidor, sem e-mail de confirmação (2026-09-04)
+**O que**: cadastro do personal e aceite do convite do aluno criam a conta com uma chave de serviço no
+servidor (`lib/auth/cadastro.ts`), já confirmada, e fazem o login em seguida.
+**Por quê**: o projeto Supabase é compartilhado e o e-mail de confirmação apontaria para o site da esteira;
+no piloto, o convite chega pelo WhatsApp do personal, que já é a prova de identidade que importa.
+A chave de serviço nunca sai do servidor (`server-only`) e só faz isso.
+**Aula**: "confirmar e-mail" protege contra cadastro com e-mail alheio. Aqui o risco é baixo (quem tem o
+link é quem o personal convidou) e o ganho de conversão no celular é alto. Revisar quando houver domínio próprio.
+
+## 11. Convite por link com token único e RPC no banco (2026-09-04)
+**O que**: cada aluno nasce com `convite_token`; a página pública `/convite/[token]` só vê nomes
+(`info_convite`, liberada para anônimo) e o aceite é uma função `aceitar_convite` que liga a conta ao
+cadastro e invalida o token, tudo dentro do banco com regras de RLS testadas.
+**Por quê**: a regra "só a primeira conta de aluno que abrir o link fica com ele" precisa ser atômica;
+se ficasse no código da tela, duas aberturas quase simultâneas poderiam dar conflito.
+
