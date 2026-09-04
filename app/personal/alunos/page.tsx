@@ -34,7 +34,7 @@ export default async function PaginaAlunos({ searchParams }: { searchParams: Pro
             return (
               <li key={a.id} className={`flex flex-col gap-3 p-4 sm:flex-row sm:items-center sm:justify-between ${destaque ? "bg-amber-50" : ""}`}>
                 <div>
-                  <p className="font-medium">{a.nome}</p>
+                  <Link href={`/personal/alunos/${a.id}`} className="font-medium hover:underline">{a.nome}</Link>
                   <p className="text-sm text-neutral-500">{ROTULO[a.status] ?? a.status}{a.telefone ? ` · ${a.telefone}` : ""}</p>
                 </div>
                 {a.status === "convidado" && (
