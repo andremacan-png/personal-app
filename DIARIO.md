@@ -74,4 +74,7 @@ André saiu por 4h e pediu produção contínua. Entregue, tudo com RLS testada 
 - Evolução: `evolucaoPorExercicio` + gráfico recharts (carga máx. ou volume por treino, recorde, delta). Aluno em "Evolução", personal em "ver evolução" no detalhe do aluno.
 - Ajustes: overflow horizontal no mobile, último treino na lista de alunos, dica na home do aluno para informar limitações. E2E do fluxo completo agora cobre o conflito (limitação de ombro × exercício com contraindicação ombro).
 - Provas: vitest 38, e2e 5 specs (fluxo completo ~17 s local). Tudo no ar via push.
+- Também: **conquistas** derivadas dos dados (`lib/conquistas.ts`, sem tabela: 1º treino, 5/10/25/50/100 treinos, 2/4/8/12 semanas seguidas, semana cheia, recorde nos últimos 7 dias) na home do aluno; **copiar programa** de outro aluno como modelo (cargas não vêm junto); **landing pública** na raiz com CTA de cadastro; PWA: manifest e ícones servidos em produção (sem service worker ainda).
+- Chaves: `ANTHROPIC_API_KEY` posta em production+preview na Vercel e no `.env.test.local` (via pipe, sem exibir). IA de alternativas funciona em produção.
+- Lição: `<Link>` do Next pré-carrega a rota; um link para `?ia=1` disparava a chamada à IA só de aparecer na tela. Virou ação de formulário.
 
