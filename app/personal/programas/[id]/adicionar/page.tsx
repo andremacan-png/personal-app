@@ -17,9 +17,13 @@ export default async function PaginaAdicionarExercicio({ params, searchParams }:
   const p = await obterProgramaCompleto(id);
   const d = p?.dias.find((x) => x.id === dia);
   if (!p || !d) notFound();
-  const [listaBruta, limitacoes] = await Promise.all([listarExercicios({ busca: q, grupo: grupo || undefined, limite: 60 }), regioesAtivas(p.aluno_id)]);
-  const lista = listaBruta.map((e) => ({ ...e, conflito: conflitos(e.contraindicacoes, limitacoes) })).sort((a, b) => a.conflito.length - b.conflito.length);
   const trocando = d.exercicios.find((x) => x.id === trocar);
+  const [listaBruta, limitacoes] = await Promise.all([listarExercicios({ busca: q, grupo: grupo || undefined, limite: trocando ? 200 : 60 }), regioesAtivas(p.aluno_id)]);
+  // Ranking: sem conflito primeiro; ao trocar, mesma categoria e mesmo equipamento do original vêm antes.
+  const orig = trocando?.exercicio;
+  const peso = (e: typeof listaBruta[number] & { conflito: string[] }) =>
+    e.conflito.length * 100 + (orig && e.categoria !== orig.categoria ? 10 : 0) + (orig && orig.equipamento && e.equipamento !== orig.equipamento ? 1 : 0);
+  const lista = listaBruta.map((e) => ({ ...e, conflito: conflitos(e.contraindicacoes, limitacoes) })).sort((a, b) => peso(a) - peso(b) || a.nome.localeCompare(b.nome)).slice(0, 60);
   let sugestoes: { exercicio_id: string; motivo: string }[] = [];
   if (ia === "1" && trocando && limitacoes.length > 0) {
     const candidatos = lista.filter((e) => e.conflito.length === 0 && e.id !== trocando.exercicio_id);
